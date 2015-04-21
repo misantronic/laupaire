@@ -1,0 +1,17 @@
+INSERT INTO `rex_square_shop_category` (`title0`) VALUES 
+("Armbanduhren")
+,("Bekleidung")
+,("Schuhe")
+,("Bekleidungsaccessoires")
+,("Sonnenbrillen")
+,("Handtaschen")
+,("Geldbörsen & Etuis")
+,("Schmuck")
+,("Armbanduhren")
+,("Bücher")
+,("DVDs & Filme")
+,("Musik")
+,("PC- & Videospiele")
+,("Hosen")
+,("Leggings")
+,("Jacke");

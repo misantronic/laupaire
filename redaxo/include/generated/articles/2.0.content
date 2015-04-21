@@ -1,0 +1,2 @@
+?><?php if ($this->ctype == '1' || ($this->ctype == '-1')) { ?><h1>Music</h1>
+<p>the music text</p><?php } ?>

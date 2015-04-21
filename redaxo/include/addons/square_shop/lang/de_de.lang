@@ -1,0 +1,92 @@
+square_shop_start = Start
+square_shop_article = Artikel
+square_shop_category = Kategorie
+square_shop_order = Bestellung
+square_shop_customer = Kunde
+square_shop_settings = Einstellung
+square_shop_setup = Setup
+square_shop_help = Hilfe
+
+square_shop_start_title = Online Shop für Redaxo
+square_shop_extlink_to_addon = zum Addon - redaxo.org
+
+square_shop_help_chapter_readme = Readme
+square_shop_help_chapter_quickstart = Quickstart
+square_shop_help_chapter_changelog = Changelog
+square_shop_help_chapter_license = Lizenz
+
+square_shop_config_ok = Einstellungen wurden gespeichert.
+square_shop_config_error = Einstellungen konnten nicht gespeichert werden!
+
+square_shop_settings_currency = Währung
+square_shop_settings_mwst = MwSt in %
+square_shop_settings_payment = Zahlungsart
+square_shop_onbill = auf Rechnung
+square_shop_paypal = PayPal
+square_shop_settings_save = Einstellungen speichern
+
+square_shop_label_id = ID
+square_shop_label_cat = Kategorie
+square_shop_label_no = Nummer
+square_shop_label_title = Titel
+square_shop_label_price = Preis
+square_shop_label_cat_id = Kat ID
+square_shop_label_description = Beschreibung
+square_shop_label_images = Bilder
+square_shop_label_firstname = Vorname
+square_shop_label_lastname = Nachname
+square_shop_label_email = E-Mail
+square_shop_label_telephone = Telefon
+square_shop_label_company = Firma
+square_shop_label_street = Strasse
+square_shop_label_zip = PLZ
+square_shop_label_city = Ort
+square_shop_label_password = Passwort
+square_shop_label_qty = Menge
+square_shop_label_total = Total
+square_shop_label_artno = label_artno
+square_shop_label_total_amount = Gesamtbetrag
+square_shop_label_status = Status
+square_shop_label_createdate = label_createdate
+square_shop_label_updatedate = label_updatedate
+square_shop_label_delivery_address = label_delivery_address
+square_shop_label_orderno = BestellNr.
+square_shop_label_time = Zeit
+
+square_shop_quicklinks = Quicklinks
+
+square_shop_searchkey = Suchwort
+
+square_shop_label_customer_id = KundenID
+square_shop_label_category_id = Kat ID
+square_shop_label_category_title = Kategorie
+square_shop_label_category_title0 = Kategorie
+square_shop_label_customer_title = Anrede
+square_shop_label_customer_firstname = Vorname
+square_shop_label_customer_lastname = Nachname
+square_shop_order_item = Belegposition
+
+square_shop_label_payment = Zahlungsart
+
+square_shop_billing = Rechnungsadresse
+square_shop_delivery = Lieferadresse
+square_shop_subtotal = Subtotal
+square_shop_mwst = MwSt
+square_shop_total = Total
+
+square_shop_addon_help = Dieses REDAXO-AddOn ermöglicht einen Online-Shop betrieb.
+
+square_shop_label_payment_status = Zahlungsstatus
+
+square_shop_settings_paypal_configuration = PayPal Konfiguration
+square_shop_settings_paypal_business = Verkäuferkonto auf dem die Buchung durchgeführt
+square_shop_settings_paypal_debug = Debug Modus <br>(Logging)
+square_shop_settings_paypal_debug_0 = nein
+square_shop_settings_paypal_debug_1 = ja
+square_shop_settings_paypal_mail_errors_to = Fehlermeldungen an folgende E-Mail verschicken
+square_shop_settings_paypal_use_sandbox = PayPal Sandbox <br>(Test-Account)
+square_shop_settings_paypal_use_sandbox_0 = nein
+square_shop_settings_paypal_use_sandbox_1 = ja
+
+
+square_shop_label_delivery_same_like_billing = Lieferadresse entspricht Rechnungsadresse
