@@ -272,7 +272,7 @@ nav#navbar ul.nav li a:active {
   clear: both;
 }
 #newsletter {
-  background: rgba(45, 45, 45, 0.85);
+  background: #2d2d2d;
   margin: 15px 0 0;
   padding: 15px;
   font-family: Raleway, Arial, Helvetica, sans-serif;
