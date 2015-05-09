@@ -1,0 +1,151 @@
+@import "../../bower_components/bootstrap/less/variables";
+@import "vars";
+
+article.news-entry {
+	time {
+		float:right;
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	p {
+		margin-bottom: 40px;
+
+		img.left {
+			float: left;
+			margin: 0 15px 5px 0;
+			max-width: 100%;
+		}
+	}
+}
+
+ul#tourdates {
+	display: table;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+
+	> li.tourdate {
+		display: table-row;
+
+		> * {
+			display: table-cell;
+			padding: 10px 0;
+			font-size: 24px;
+		}
+
+		> time {
+
+		}
+
+		> address {
+
+		}
+
+		> a {
+			text-align: right;
+		}
+	}
+
+	@media (max-width: @screen-xs-max) {
+		display: block;
+
+		> li.tourdate {
+			display: block;
+			padding-bottom: 15px;
+			margin-bottom: 15px;
+			border-bottom: 1px solid #BBB;
+
+			> * {
+				display: block;
+				text-align: center;
+				padding: 0;
+				margin: 0;
+			}
+
+			> a {
+				text-align: center;
+			}
+
+			> br {
+				display: none;
+			}
+		}
+	}
+}
+
+ul.gallery {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	> li {
+		display: inline-block;
+		margin-bottom: 15px;
+
+		@media (min-width: @screen-xs-min) {
+			width: 100%;
+		}
+
+		@media (min-width: @screen-md-min) {
+			width: 31%;
+			margin-right: 2%;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&:last-child:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.video {
+	float: left;
+	margin: 0 0 20px 0;
+
+	img {
+		width: 100%;
+	}
+
+	span.title {
+		text-align: center;
+		display: block;
+		margin-top: 4px;
+	}
+
+	@media (min-width: @screen-xs-min) {
+		width: 100%;
+	}
+
+	@media (min-width: @screen-md-min) {
+		width: 31%;
+		margin-right: 2%;
+	}
+}
+
+.album-wrapper {
+	> iframe {
+		float: left;
+		margin-bottom: 20px;
+		margin-right: 20px;
+
+		@media (max-width: @screen-xs-max) {
+			width: 100%;
+			float: none;
+			display: block;
+			margin: 0 0 20px 0;
+		}
+	}
+
+	&:last-child:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}

@@ -1,1 +1,45 @@
-?>
+?><?php if ($this->ctype == '1' || ($this->ctype == '-1')) { ?><div class="block-html"><h1>Video</h1></div><?php
+if ("video-1.jpg" != "") {
+	$arr = explode(",","video-1.jpg");
+	foreach ($arr as $value) {
+		$video = str_replace("/watch?v=", "/embed/", "https://www.youtube.com/embed/XgTEw6ReCSs");
+		echo '<div class="video">';
+		echo '	<a href="'. $video .'" class="fancybox fancybox.iframe"><img src="index.php?rex_img_type=thumbnail&rex_img_file='. $value .'" /></a>';
+		echo '	<span class="title">Rollercoaster Girl (official video)</span>';
+		echo '</div>';
+	}
+}
+?><?php
+if ("video-2_1.jpg" != "") {
+	$arr = explode(",","video-2_1.jpg");
+	foreach ($arr as $value) {
+		$video = str_replace("/watch?v=", "/embed/", "https://www.youtube.com/watch?v=z1Mt8vrAX6g");
+		echo '<div class="video">';
+		echo '	<a href="'. $video .'" class="fancybox fancybox.iframe"><img src="index.php?rex_img_type=thumbnail&rex_img_file='. $value .'" /></a>';
+		echo '	<span class="title">Rollercoaster Girl live</span>';
+		echo '</div>';
+	}
+}
+?><?php
+if ("video-3.jpg" != "") {
+	$arr = explode(",","video-3.jpg");
+	foreach ($arr as $value) {
+		$video = str_replace("/watch?v=", "/embed/", "https://www.youtube.com/watch?v=hkZFEKaXCg8");
+		echo '<div class="video">';
+		echo '	<a href="'. $video .'" class="fancybox fancybox.iframe"><img src="index.php?rex_img_type=thumbnail&rex_img_file='. $value .'" /></a>';
+		echo '	<span class="title">Always Travelling live</span>';
+		echo '</div>';
+	}
+}
+?><?php
+if ("video-4.jpg" != "") {
+	$arr = explode(",","video-4.jpg");
+	foreach ($arr as $value) {
+		$video = str_replace("/watch?v=", "/embed/", "https://www.youtube.com/watch?v=VeeINpadQLI");
+		echo '<div class="video">';
+		echo '	<a href="'. $video .'" class="fancybox fancybox.iframe"><img src="index.php?rex_img_type=thumbnail&rex_img_file='. $value .'" /></a>';
+		echo '	<span class="title">Keep On Steppin Boy live</span>';
+		echo '</div>';
+	}
+}
+?><?php } ?>

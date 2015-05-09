@@ -1,0 +1,6 @@
+@media (max-width: 767px) {
+  body.page-live h1 {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}

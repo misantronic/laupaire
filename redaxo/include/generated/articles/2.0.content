@@ -1,2 +1,5 @@
-?><?php if ($this->ctype == '1' || ($this->ctype == '-1')) { ?><h1>Music</h1>
-<p>the music text</p><?php } ?>
+?><?php if ($this->ctype == '1' || ($this->ctype == '-1')) { ?><div class="block-html"><h1>Music</h1></div><div class="block-html"><h2>Rollercoaster Girl - EP</h2>
+<div class="album-wrapper">
+	<iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A5r1raegvl3cNcCZhz4DtZL&theme=white" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+	<iframe src="https://widgets.itunes.apple.com/widget.html?c=us&brc=FFFFFF&blc=FFFFFF&trc=FFFFFF&tlc=FFFFFF&d=&t=&m=music&e=album&w=250&h=300&ids=923084086&wt=discovery&partnerId=&affiliate_id=&at=&ct=" frameborder=0 style="overflow-x:hidden;overflow-y:hidden;width:250px;height: 300px;border:0px"></iframe>
+</div></div><?php } ?>

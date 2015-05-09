@@ -1,6 +1,6 @@
 <?php
 $REX['ART'][4]['article_id'][0] = '4';
-$REX['ART'][4]['last_update_stamp'][0] = '1429645752';
+$REX['ART'][4]['last_update_stamp'][0] = '1431076588';
 $REX['ART'][4]['pid'][0] = '4';
 $REX['ART'][4]['re_id'][0] = '0';
 $REX['ART'][4]['name'][0] = 'Live';
@@ -12,7 +12,7 @@ $REX['ART'][4]['prior'][0] = '1';
 $REX['ART'][4]['path'][0] = '|';
 $REX['ART'][4]['status'][0] = '1';
 $REX['ART'][4]['createdate'][0] = '1429645582';
-$REX['ART'][4]['updatedate'][0] = '1429645558';
+$REX['ART'][4]['updatedate'][0] = '1431076588';
 $REX['ART'][4]['template_id'][0] = '1';
 $REX['ART'][4]['clang'][0] = '0';
 $REX['ART'][4]['createuser'][0] = 'root';

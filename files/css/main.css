@@ -1,3 +1,308 @@
+@font-face {
+  font-family: 'FuturaMedium';
+  src: url('fonts/FuturaMedium.eot');
+  src: url('fonts/FuturaMedium.eot?#iefix') format('embedded-opentype'), url('fonts/FuturaMedium.woff2') format('woff2'), url('fonts/FuturaMedium.woff') format('woff'), url('fonts/FuturaMedium.ttf') format('truetype'), url('fonts/FuturaMedium.svg#FuturaMedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+html,
 body {
-
+  height: 100%;
+}
+body {
+  background: url(../img/palmen-hd-sm.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 4px;
+}
+body h1,
+body h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+body a {
+  text-decoration: none;
+}
+body a:hover {
+  text-decoration: none;
+}
+body .clearfix {
+  clear: both;
+  height: 0;
+}
+@media (min-width: 1200px) {
+  body .container {
+    width: 970px;
+  }
+}
+body > .container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#social-media {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 20;
+  list-style-type: none;
+}
+#social-media > li {
+  float: left;
+  margin-left: 5px;
+}
+#social-media > li a {
+  color: #337ab7;
+}
+#social-media > li a:hover {
+  color: #fff5e1;
+}
+#social-media > li:last-child:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#social-media [class^="icon-"],
+#social-media [class*=" icon-"] {
+  font-size: 26px;
+}
+@media (max-width: 991px) {
+  #social-media {
+    position: static;
+    text-align: center;
+    padding-top: 19px;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 15px 0 0;
+  }
+  #social-media > li {
+    margin-left: 0;
+    margin-right: 3vw;
+    float: none;
+    display: inline;
+  }
+  #social-media [class^="icon-"],
+  #social-media [class*=" icon-"] {
+    font-size: 46px;
+    color: #fff5e1;
+  }
+}
+@media (max-width: 480px) {
+  #social-media [class^="icon-"],
+  #social-media [class*=" icon-"] {
+    font-size: 31px;
+  }
+}
+#widgets {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 10;
+}
+#widgets > * {
+  margin-bottom: 10px;
+}
+#widgets .widget-spotify {
+  width: 150px;
+  height: 25px;
+}
+@media (max-width: 991px) {
+  #widgets {
+    position: static;
+    left: auto;
+    top: auto;
+    padding: 15px 15px 0;
+    box-sizing: border-box;
+    height: 105px;
+  }
+}
+header {
+  padding: 25px 0 0;
+  position: fixed;
+  width: calc(100% - 30px);
+  left: 15px;
+  top: 0;
+  box-sizing: border-box;
+  z-index: 10;
+  background: url(../img/palmen-hd-sm.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+header .bg {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 0;
+}
+@media (max-width: 767px) {
+  header {
+    position: static;
+    background: none;
+    margin-bottom: 20px;
+  }
+  header .bg {
+    display: none;
+  }
+}
+nav#navbar {
+  box-shadow: none;
+}
+nav#navbar ul.nav {
+  text-align: center;
+  float: none;
+}
+nav#navbar ul.nav li {
+  display: inline;
+  float: none;
+}
+nav#navbar ul.nav li a {
+  font-family: FuturaMedium, Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 3px;
+  color: #fff5e1;
+}
+nav#navbar ul.nav li a:hover,
+nav#navbar ul.nav li a:focus,
+nav#navbar ul.nav li a:active {
+  background: none;
+  text-decoration: underline;
+}
+#navbar-toggle {
+  position: absolute;
+  right: 20px;
+  top: 26px;
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  border-radius: 0;
+  z-index: 10;
+}
+#navbar-toggle .icon-bar {
+  background: #fff5e1;
+  border-radius: 0;
+  height: 5px;
+  width: 100%;
+}
+#logo {
+  font-family: FuturaMedium, Arial, Helvetica, sans-serif;
+  text-align: center;
+  height: 60px;
+  line-height: 88%;
+  font-size: 82px;
+  margin-left: 19px;
+  letter-spacing: 22px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 639px) {
+  #logo {
+    font-size: 12vw;
+    letter-spacing: 3vw;
+    text-align: left;
+    margin-left: 0;
+    height: auto;
+  }
+}
+#logo a {
+  display: block;
+  font-size: inherit;
+  text-transform: uppercase;
+  letter-spacing: inherit;
+  line-height: inherit;
+  color: #fff5e1;
+  height: inherit;
+}
+#content {
+  padding: 40px;
+  margin-top: 80vh;
+  min-height: 20vh;
+  box-sizing: border-box;
+  background: rgba(252, 247, 236, 0.85);
+  color: #444;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  transition: margin-top 0.6s ease-out;
+  -o-transition: margin-top 0.6s ease-out;
+  -moz-transition: margin-top 0.6s ease-out;
+  -webkit-transition: margin-top 0.6s ease-out;
+}
+@media (max-width: 767px) {
+  #content {
+    margin-top: 0;
+    min-height: calc(100vh - 182px);
+  }
+}
+@media (max-width: 991px) {
+  #content {
+    padding: 20px;
+  }
+}
+#content > .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+#content:last-child:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.fancybox-inner {
+  overflow: hidden !important;
+}
+.fancybox-close {
+  background: none;
+  right: 20px;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  background: #111;
+  padding: 20px;
+  position: fixed;
+  border-radius: 0 0 10px 10px;
+}
+.fancybox-close i {
+  font-size: 28px;
+  color: #fff5e1;
+  transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -webkit-transition: color 0.3s linear;
+}
+.fancybox-close:hover i {
+  color: #FFF;
+}
+.fancybox-skin {
+  border-radius: 0;
+}
+.fancybox-nav {
+  width: 25%;
+  height: 80%;
+  top: 50px;
+}
+.fancybox-wrap {
+  margin-left: -9px;
+}
+.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail,
+.ps-container:hover > .ps-scrollbar-y-rail:hover {
+  background-color: transparent;
+}
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y,
+.ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y,
+.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  background-color: #fff5e1;
 }

@@ -25,7 +25,7 @@ if (!$REX['GG']) {
 // Setupservicestatus - if everything ok -> false; if problem set to true;
 $REX['SETUP'] = false;
 $REX['SERVER'] = 'www.laupaire.de';
-$REX['SERVERNAME'] = 'L\'aupaire';
+$REX['SERVERNAME'] = 'L`aupaire';
 $REX['VERSION'] = "4";
 $REX['SUBVERSION'] = "6";
 $REX['MINORVERSION'] = "1";

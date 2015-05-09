@@ -1,0 +1,21 @@
+{
+  "name": "L`Aupaire",
+  "version": "0.1.0",
+  "homepage": "https://github.com/misantronic/laupaire",
+  "authors": [
+    "David Schkalee <david.schkalee@posteo.de>"
+  ],
+  "main": "index.php",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "fancybox": "~2.1.5"
+  }
+}

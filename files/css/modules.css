@@ -1,0 +1,123 @@
+article.news-entry time {
+  float: right;
+  font-size: 16px;
+  font-weight: bold;
+}
+article.news-entry p {
+  margin-bottom: 40px;
+}
+article.news-entry p img.left {
+  float: left;
+  margin: 0 15px 5px 0;
+  max-width: 100%;
+}
+ul#tourdates {
+  display: table;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+ul#tourdates > li.tourdate {
+  display: table-row;
+}
+ul#tourdates > li.tourdate > * {
+  display: table-cell;
+  padding: 10px 0;
+  font-size: 24px;
+}
+ul#tourdates > li.tourdate > a {
+  text-align: right;
+}
+@media (max-width: 767px) {
+  ul#tourdates {
+    display: block;
+  }
+  ul#tourdates > li.tourdate {
+    display: block;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #BBB;
+  }
+  ul#tourdates > li.tourdate > * {
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  ul#tourdates > li.tourdate > a {
+    text-align: center;
+  }
+  ul#tourdates > li.tourdate > br {
+    display: none;
+  }
+}
+ul.gallery {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul.gallery > li {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+@media (min-width: 480px) {
+  ul.gallery > li {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  ul.gallery > li {
+    width: 31%;
+    margin-right: 2%;
+  }
+}
+ul.gallery > li img {
+  width: 100%;
+}
+ul.gallery:last-child:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.video {
+  float: left;
+  margin: 0 0 20px 0;
+}
+.video img {
+  width: 100%;
+}
+.video span.title {
+  text-align: center;
+  display: block;
+  margin-top: 4px;
+}
+@media (min-width: 480px) {
+  .video {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .video {
+    width: 31%;
+    margin-right: 2%;
+  }
+}
+.album-wrapper > iframe {
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+@media (max-width: 767px) {
+  .album-wrapper > iframe {
+    width: 100%;
+    float: none;
+    display: block;
+    margin: 0 0 20px 0;
+  }
+}
+.album-wrapper:last-child:after {
+  content: "";
+  display: table;
+  clear: both;
+}
