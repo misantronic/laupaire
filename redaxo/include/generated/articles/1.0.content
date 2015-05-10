@@ -1,4 +1,10 @@
-?><?php if ($this->ctype == '1' || ($this->ctype == '-1')) { ?><div id="curtain">
+?><?php if ($this->ctype == '1' || ($this->ctype == '-1')) { ?><?php
+preg_match("/watch\?v=(.*)/", "https://www.youtube.com/watch?v=XgTEw6ReCSs", $matches);
+$video_id = $matches[1];
+?>
+<div id="curtain">
+	<div class="bg"></div>
+	<div id="curtain-video"><?= $video_id ?></div>
 	<i class="arrow glyphicon glyphicon-chevron-up"></i>
 </div><?php
 $time = strtotime("2015-05-07");

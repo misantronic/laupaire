@@ -49,19 +49,30 @@ function initNewsletter() {
 function initCurtain() {
 	var curtain = $('#curtain');
 	if(curtain.length) {
+		var curtainVideo = $('#curtain-video');
+		curtainVideo.appendTo('#content');
+
+		window.onYouTubePlayerAPIReady = function() {
+			var videoId = curtainVideo.text();
+			player = new YT.Player('curtain-video', {
+				playerVars: { 'autoplay': 1, 'controls': 1 },
+				videoId: videoId,
+				width: 860,
+				height: 460,
+				events: {
+					'onReady': onPlayerReady}
+			});
+		};
+		window.onPlayerReady = function(e) {
+			e.target.mute();
+		};
+
 		curtain
 			.on('click', '.arrow', function() {
 				curtain.addClass('up');
 
 				initSocialMedia();
 			});
-			//.hammer({
-			//	dragLockToAxis: true,
-			//	dragBlockHorizontal: true,
-			//	preventDefault: true
-			//}).bind("dragup dragdown swipeleft swiperight", function(e) {
-			//	console.log(e);
-			//});
 	} else {
 		initSocialMedia();
 	}

@@ -127,8 +127,6 @@ ul.gallery:last-child:after {
   top: 0;
   width: 100%;
   height: 105%;
-  background: transparent url(../img/laupaire.gif) no-repeat center center;
-  background-size: cover;
   z-index: 9999;
   border-bottom: 5px solid #BBB;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
@@ -142,6 +140,16 @@ ul.gallery:last-child:after {
 #curtain.up {
   top: -105%;
 }
+#curtain .bg {
+  background: transparent url(../img/laupaire.gif) no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
 #curtain .arrow {
   cursor: pointer;
   position: absolute;
@@ -150,12 +158,26 @@ ul.gallery:last-child:after {
   bottom: 5%;
   top: auto;
   left: calc(50% + 24px);
+  z-index: 15;
 }
 #curtain .arrow:hover {
   color: #333;
 }
 @media (max-width: 991px) {
   #curtain {
+    display: none;
+  }
+}
+#curtain-video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -430px;
+  margin-top: -230px;
+  z-index: 5;
+}
+@media (max-width: 991px) {
+  #curtain-video {
     display: none;
   }
 }
