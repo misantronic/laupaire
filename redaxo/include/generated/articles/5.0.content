@@ -1,1 +1,0 @@
-?><?php if ($this->ctype == '1' || ($this->ctype == '-1')) { ?><div class="block-html"><h1>About</h1></div><?php } ?>

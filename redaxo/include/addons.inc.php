@@ -51,7 +51,7 @@ $REX['ADDON']['status']['textile'] = '1';
 $REX['ADDON']['install']['version'] = '0';
 $REX['ADDON']['status']['version'] = '0';
 
-$REX['ADDON']['install']['xform'] = '0';
+$REX['ADDON']['install']['xform'] = '1';
 $REX['ADDON']['status']['xform'] = '0';
 // --- /DYN
 // ----------------- /DONT EDIT BELOW THIS

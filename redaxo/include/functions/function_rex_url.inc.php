@@ -147,5 +147,6 @@ function rex_apache_rewrite($id, $name, $clang, $params, $divider)
         $params = '?' . substr($params, strpos($params, $divider) + strlen($divider));
     }
 
-    return $id . '-' . $clang . '-' . $name . '.html' . $params;
+    //return $id . '-' . $clang . '-' . $name . '.html' . $params;
+    return strtolower($name) . '-'. $id .'.html' . $params;
 }

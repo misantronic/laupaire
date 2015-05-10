@@ -10,8 +10,10 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-l
 
 ### Standard Rewrite - without AddOn, Add Comments when you use an Rewrite AddOn
-RewriteRule ^([0-9]*)-([0-9]*)- index.php?article_id=$1&clang=$2&%{QUERY_STRING}
-RewriteRule ^([0-9]*)- index.php?article_id=$1&%{QUERY_STRING}
+# RewriteRule ^([0-9]*)-([0-9]*)- index.php?article_id=$1&clang=$2&%{QUERY_STRING}
+# RewriteRule ^([0-9]*)- index.php?article_id=$1&%{QUERY_STRING}
+
+RewriteRule ^\w+?-(\d*)\.html index.php?article_id=$1&clang=0&%{QUERY_STRING}
 
 ### Remove Comments when you use Fullname "url_rewrite" AddOn
 #RewriteCond %{REQUEST_URI} !^redaxo/.*

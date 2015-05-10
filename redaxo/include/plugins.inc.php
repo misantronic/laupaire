@@ -30,16 +30,16 @@ $REX['ADDON']['plugins']['cronjob']['status']['article_status'] = '0';
 $REX['ADDON']['plugins']['cronjob']['install']['optimize_tables'] = '0';
 $REX['ADDON']['plugins']['cronjob']['status']['optimize_tables'] = '0';
 
-$REX['ADDON']['plugins']['xform']['install']['email'] = '0';
-$REX['ADDON']['plugins']['xform']['status']['email'] = '0';
+$REX['ADDON']['plugins']['xform']['install']['email'] = '1';
+$REX['ADDON']['plugins']['xform']['status']['email'] = '1';
 
 $REX['ADDON']['plugins']['xform']['install']['geo'] = '0';
 $REX['ADDON']['plugins']['xform']['status']['geo'] = '0';
 
-$REX['ADDON']['plugins']['xform']['install']['manager'] = '0';
-$REX['ADDON']['plugins']['xform']['status']['manager'] = '0';
+$REX['ADDON']['plugins']['xform']['install']['manager'] = '1';
+$REX['ADDON']['plugins']['xform']['status']['manager'] = '1';
 
-$REX['ADDON']['plugins']['xform']['install']['setup'] = '0';
-$REX['ADDON']['plugins']['xform']['status']['setup'] = '0';
+$REX['ADDON']['plugins']['xform']['install']['setup'] = '1';
+$REX['ADDON']['plugins']['xform']['status']['setup'] = '1';
 // --- /DYN
 // ----------------- /DONT EDIT BELOW THIS

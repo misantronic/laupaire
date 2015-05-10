@@ -1,6 +1,20 @@
+String.prototype.rot13 = function(){
+	return this.replace(/[a-zA-Z]/g, function(c){
+		return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+	});
+};
+
 $(document).ready(function() {
 	initNewsletter();
 	initCurtain();
+
+	// decode email-addresses
+	$('a.email').each(function() {
+		var link = $(this);
+		var href = link.attr('href').split("mailto:").join('');
+
+		link.attr('href', 'mailto:'+ href.rot13());
+	})
 });
 
 function initNewsletter() {
@@ -47,7 +61,7 @@ function initNewsletter() {
 }
 
 function initCurtain() {
-	var curtain = $('#curtain');
+	var curtain = $('#curtain:visible');
 	if(curtain.length) {
 		var curtainVideo = $('#curtain-video');
 		curtainVideo.appendTo('#content');
