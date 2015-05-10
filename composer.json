@@ -1,0 +1,12 @@
+{
+    "name": "david/laupaire",
+    "require": {
+        "drewm/mailchimp-api": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "David Skx",
+            "email": "david.skx@posteo.de"
+        }
+    ]
+}

@@ -1,12 +1,10 @@
 <div id="widgets">
-	<div class="widget-spotify">
-		<iframe src="https://embed.spotify.com/follow/1/?uri=spotify:artist:6d9XIbBseVi999qdzDEtwE&size=basic&theme=light" width="200" height="25" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
-	</div>
+	<div class="widget-spotify"></div>
 	<div class="widget-facebook">
 		<div class="fb-like" data-href="https://www.facebook.com/laupaire" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 	</div>
 	<div class="widget-twitter">
-		<a href="https://twitter.com/laupaire" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @laupaire</a>
+		<a href="https://twitter.com/laupaire" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false"></a>
 	</div>
 </div>
 <ul id="social-media">

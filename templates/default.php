@@ -10,7 +10,6 @@ $name = strtolower($this->getValue("name"));
 
 	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?= $REX['HTDOCS_PATH'] ?>bower_components/bootstrap/dist/css/bootstrap.min.css">
-	<!--link rel="stylesheet" type="text/css" href="<?= $REX['HTDOCS_PATH'] ?>node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" /-->
 	<link rel="stylesheet" type="text/css" href="<?= $REX['HTDOCS_PATH'] ?>bower_components/fancybox/source/jquery.fancybox.css" />
 	<link rel="stylesheet" type="text/css" href="<?= $REX['HTDOCS_PATH'] ?>files/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?= $REX['HTDOCS_PATH'] ?>files/css/icons.css" />
@@ -18,9 +17,10 @@ $name = strtolower($this->getValue("name"));
 	<link rel="stylesheet" type="text/css" href="<?= $REX['HTDOCS_PATH'] ?>files/css/pages.css" />
 
 	<script type="text/javascript" src="<?= $REX['HTDOCS_PATH'] ?>bower_components/jquery/dist/jquery.min.js"></script>
-	<!--script type="text/javascript" src="<?= $REX['HTDOCS_PATH'] ?>node_modules/perfect-scrollbar/dist/js/min/perfect-scrollbar.jquery.min.js"></script-->
 	<script type="text/javascript" src="<?= $REX['HTDOCS_PATH'] ?>files/js/main.js"></script>
 	<script type="text/javascript" src="<?= $REX['HTDOCS_PATH'] ?>bower_components/benbarnett/jQuery-Animate-Enhanced/jquery.animate-enhanced.min.js"></script>
+	<!--script type="text/javascript" src="<?= $REX['HTDOCS_PATH'] ?>node_modules/hammerjs/hammer.min.js"></script-->
+	<!--script type="text/javascript" src="<?= $REX['HTDOCS_PATH'] ?>node_modules/jquery-hammerjs/jquery.hammer.js"></script-->
 	<script type="text/javascript" src="<?= $REX['HTDOCS_PATH'] ?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?= $REX['HTDOCS_PATH'] ?>bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
 	<script src="//www.youtube.com/player_api"></script>
@@ -70,14 +70,5 @@ REX_TEMPLATE[id="4"]
 <?php } ?>
 
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3&appId=572599766179075";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
-</script>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </body>
 </html>

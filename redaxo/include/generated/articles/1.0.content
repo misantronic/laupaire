@@ -1,4 +1,6 @@
-?><?php if ($this->ctype == '1' || ($this->ctype == '-1')) { ?><?php
+?><?php if ($this->ctype == '1' || ($this->ctype == '-1')) { ?><div id="curtain">
+	<i class="arrow glyphicon glyphicon-chevron-up"></i>
+</div><?php
 $time = strtotime("2015-05-07");
 $image = "";
 if ("video-1.jpg" != "") {

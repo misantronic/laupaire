@@ -1,10 +1,10 @@
 <?php
 $REX['ART'][1]['article_id'][0] = '1';
-$REX['ART'][1]['last_update_stamp'][0] = '1431093170';
+$REX['ART'][1]['last_update_stamp'][0] = '1431230156';
 $REX['ART'][1]['pid'][0] = '1';
 $REX['ART'][1]['re_id'][0] = '0';
-$REX['ART'][1]['name'][0] = 'News';
-$REX['ART'][1]['catname'][0] = 'News';
+$REX['ART'][1]['name'][0] = 'Home';
+$REX['ART'][1]['catname'][0] = 'Home';
 $REX['ART'][1]['catprior'][0] = '1';
 $REX['ART'][1]['attributes'][0] = '';
 $REX['ART'][1]['startpage'][0] = '1';
@@ -12,7 +12,7 @@ $REX['ART'][1]['prior'][0] = '1';
 $REX['ART'][1]['path'][0] = '|';
 $REX['ART'][1]['status'][0] = '1';
 $REX['ART'][1]['createdate'][0] = '1429645580';
-$REX['ART'][1]['updatedate'][0] = '1431093170';
+$REX['ART'][1]['updatedate'][0] = '1431229241';
 $REX['ART'][1]['template_id'][0] = '1';
 $REX['ART'][1]['clang'][0] = '0';
 $REX['ART'][1]['createuser'][0] = 'root';

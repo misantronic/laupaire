@@ -36,8 +36,8 @@ $REX['ADDON']['status']['install'] = '1';
 $REX['ADDON']['install']['metainfo'] = '1';
 $REX['ADDON']['status']['metainfo'] = '1';
 
-$REX['ADDON']['install']['multinewsletter'] = '1';
-$REX['ADDON']['status']['multinewsletter'] = '1';
+$REX['ADDON']['install']['multinewsletter'] = '0';
+$REX['ADDON']['status']['multinewsletter'] = '0';
 
 $REX['ADDON']['install']['phpmailer'] = '1';
 $REX['ADDON']['status']['phpmailer'] = '1';

@@ -46,8 +46,8 @@ body {
 		margin-bottom: 30px;
 	}
 
-	a {
-		text-decoration: none;
+	a, a:active, a:focus {
+		text-decoration: none !important;
 
 		&:hover {
 			text-decoration: none;
@@ -232,6 +232,10 @@ nav#navbar {
 					text-decoration: underline;
 				}
 			}
+
+			&.active a {
+				color: #333;
+			}
 		}
 	}
 }
@@ -352,16 +356,6 @@ nav#navbar {
 		display: none;
 	}
 
-	form.loading {
-		.icon-loader {
-			margin-left: 10px;
-			width: 16px;
-			height: 11px;
-			display: inline-block;
-			background: url(../img/ajax-loader.gif) no-repeat 0 0;
-		}
-	}
-
 	h2 {
 		font-size: 30px;
 		color: @color-logo;
@@ -378,6 +372,20 @@ nav#navbar {
 		max-width: 280px;
 		width: 100%;
 		margin: 5px;
+		position: relative;
+	}
+
+	form.loading {
+		label:after {
+			content: '';
+			width: 16px;
+			height: 11px;
+			display: inline-block;
+			position: absolute;
+			right: 2px;
+			top: 9px;
+			background: url(../img/ajax-loader.gif) no-repeat 0 0;
+		}
 	}
 
 	#txt-email {
@@ -388,6 +396,7 @@ nav#navbar {
 		background: none;
 		box-shadow: none;
 		color: #fff;
+		padding-right: 25px;
 	}
 
 	.btn-subscribe {
@@ -416,7 +425,7 @@ nav#navbar {
 
 	@media (min-width: @screen-md-min) {
 		.newsletter-wrapper {
-			width: 670px;
+			width: 640px;
 			margin: 0 auto;
 		}
 	}

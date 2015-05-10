@@ -123,7 +123,7 @@ $REX['MEDIAPOOL']['ALLOWED_DOCTYPES']   = array('bmp', 'css', 'doc', 'docx', 'ep
 // ----------------- DB1
 $REX['DB']['1']['HOST'] = 'localhost';
 $REX['DB']['1']['LOGIN'] = 'root';
-$REX['DB']['1']['PSW'] = 'root';
+$REX['DB']['1']['PSW'] = '';
 $REX['DB']['1']['NAME'] = 'redaxo_laupaire';
 $REX['DB']['1']['PERSISTENT'] = false;
 
