@@ -80,17 +80,15 @@ function initCurtain() {
 		window.onPlayerReady = function(e) {
 			e.target.mute();
 		};
-
-		curtain
-			.on('click', '.arrow', function() {
-				curtain.addClass('up');
-
-				initSocialMedia();
-			});
 	} else {
 		initSocialMedia();
 	}
 
+	$('body').on('click', '#curtain', function(e) {
+		$(e.currentTarget).addClass('up');
+
+		initSocialMedia();
+	});
 }
 
 function initSocialMedia() {
