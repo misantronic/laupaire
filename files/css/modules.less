@@ -26,13 +26,13 @@ ul#tourdates {
 	padding: 0;
 	width: 100%;
 
-	> li.tourdate {
+	> li {
 		display: table-row;
 
 		> * {
 			display: table-cell;
 			padding: 10px 0;
-			font-size: 24px;
+			font-size: 20px;
 		}
 
 		> time {
@@ -51,7 +51,7 @@ ul#tourdates {
 	@media (max-width: @screen-xs-max) {
 		display: block;
 
-		> li.tourdate {
+		> li {
 			display: block;
 			padding-bottom: 15px;
 			margin-bottom: 15px;
@@ -69,6 +69,10 @@ ul#tourdates {
 			}
 
 			> br {
+				display: none;
+			}
+
+			&:first-child {
 				display: none;
 			}
 		}
@@ -148,6 +152,12 @@ ul.gallery {
 		display: table;
 		clear: both;
 	}
+}
+
+.spotify-track {
+	display: block;
+	margin: 0 0 20px 0;
+	max-width: 480px;
 }
 
 #curtain {

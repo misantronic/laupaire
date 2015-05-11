@@ -5,6 +5,10 @@
   font-weight: normal;
   font-style: normal;
 }
+html,
+body {
+  height: 100%;
+}
 body {
   background: url(../img/palmen-hd-sm.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -16,6 +20,13 @@ body {
   body {
     background: #93B8D2;
     background-size: auto;
+  }
+  body.page-home {
+    background: url(../img/palmen-hd-sm.jpg) no-repeat top center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 }
 body h1 {
@@ -43,6 +54,12 @@ body a:focus:hover {
 body .clearfix {
   clear: both;
   height: 0;
+}
+body .text-right {
+  text-align: right;
+}
+body .bold {
+  font-weight: bold;
 }
 @media (min-width: 1200px) {
   body .container {
@@ -85,6 +102,12 @@ body > .container {
 #social-media [class*=" icon-"] {
   font-size: 26px;
 }
+#social-media [class^="icon-"].icon-amazon-with-circle,
+#social-media [class*=" icon-"].icon-amazon-with-circle {
+  font-size: 30px;
+  position: relative;
+  top: -2px;
+}
 @media (max-width: 991px) {
   #social-media {
     position: static;
@@ -92,6 +115,14 @@ body > .container {
     padding-top: 19px;
     background: rgba(0, 0, 0, 0.3);
     margin: 15px 0 0;
+  }
+  .page-home #social-media {
+    position: fixed;
+    left: 0;
+    top: auto;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
   }
   #social-media > li {
     margin-left: 0;
@@ -104,11 +135,23 @@ body > .container {
     font-size: 46px;
     color: #fff5e1;
   }
+  #social-media [class^="icon-"].icon-amazon-with-circle,
+  #social-media [class*=" icon-"].icon-amazon-with-circle {
+    position: relative;
+    top: 4px;
+    line-height: 0;
+    font-size: 54px;
+  }
 }
 @media (max-width: 480px) {
   #social-media [class^="icon-"],
   #social-media [class*=" icon-"] {
     font-size: 31px;
+  }
+  #social-media [class^="icon-"].icon-amazon-with-circle,
+  #social-media [class*=" icon-"].icon-amazon-with-circle {
+    font-size: 38px;
+    top: 3px;
   }
 }
 #widgets {
@@ -120,9 +163,16 @@ body > .container {
 #widgets > * {
   margin-bottom: 10px;
 }
+#widgets .widget-twitter,
+#widgets .widget-facebook {
+  display: none;
+}
 #widgets .widget-spotify {
   width: 150px;
   height: 25px;
+}
+#widgets .widget-whatsapp {
+  float: right;
 }
 @media (max-width: 991px) {
   #widgets {
@@ -131,7 +181,14 @@ body > .container {
     top: auto;
     padding: 15px 15px 0;
     box-sizing: border-box;
-    height: 105px;
+    height: 40px;
+    width: 100%;
+  }
+  .page-home #widgets {
+    position: fixed;
+    left: 0;
+    top: auto;
+    bottom: 100px;
   }
 }
 header {
@@ -179,6 +236,9 @@ nav#navbar ul.nav li {
   display: inline;
   float: none;
 }
+nav#navbar ul.nav li.cat-home {
+  display: none;
+}
 nav#navbar ul.nav li a {
   font-family: FuturaMedium, Arial, Helvetica, sans-serif;
   font-size: 22px;
@@ -193,8 +253,9 @@ nav#navbar ul.nav li a:active {
   background: none;
   text-decoration: underline;
 }
+nav#navbar ul.nav li a:hover,
 nav#navbar ul.nav li.active a {
-  color: #333;
+  color: #337ab7;
 }
 #navbar-toggle {
   position: absolute;
@@ -273,6 +334,9 @@ nav#navbar ul.nav li.active a {
   padding-left: 0;
   padding-right: 0;
 }
+#content.empty {
+  visibility: hidden;
+}
 #content:last-child:after {
   content: "";
   display: table;
@@ -287,6 +351,7 @@ nav#navbar ul.nav li.active a {
   width: 100%;
   left: 0;
   bottom: -75px;
+  z-index: 9999;
   transition: bottom 0.3s ease-out;
   -o-transition: bottom 0.3s ease-out;
   -moz-transition: bottom 0.3s ease-out;
@@ -415,6 +480,9 @@ nav#navbar ul.nav li.active a {
 }
 .fancybox-wrap {
   margin-left: -9px;
+}
+.fancybox-overlay {
+  background: rgba(255, 255, 255, 0.9);
 }
 .ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail,
 .ps-container:hover > .ps-scrollbar-y-rail:hover {

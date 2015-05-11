@@ -18,37 +18,40 @@ ul#tourdates {
   padding: 0;
   width: 100%;
 }
-ul#tourdates > li.tourdate {
+ul#tourdates > li {
   display: table-row;
 }
-ul#tourdates > li.tourdate > * {
+ul#tourdates > li > * {
   display: table-cell;
   padding: 10px 0;
-  font-size: 24px;
+  font-size: 20px;
 }
-ul#tourdates > li.tourdate > a {
+ul#tourdates > li > a {
   text-align: right;
 }
 @media (max-width: 767px) {
   ul#tourdates {
     display: block;
   }
-  ul#tourdates > li.tourdate {
+  ul#tourdates > li {
     display: block;
     padding-bottom: 15px;
     margin-bottom: 15px;
     border-bottom: 1px solid #BBB;
   }
-  ul#tourdates > li.tourdate > * {
+  ul#tourdates > li > * {
     display: block;
     text-align: center;
     padding: 0;
     margin: 0;
   }
-  ul#tourdates > li.tourdate > a {
+  ul#tourdates > li > a {
     text-align: center;
   }
-  ul#tourdates > li.tourdate > br {
+  ul#tourdates > li > br {
+    display: none;
+  }
+  ul#tourdates > li:first-child {
     display: none;
   }
 }
@@ -120,6 +123,11 @@ ul.gallery:last-child:after {
   content: "";
   display: table;
   clear: both;
+}
+.spotify-track {
+  display: block;
+  margin: 0 0 20px 0;
+  max-width: 480px;
 }
 #curtain {
   position: fixed;

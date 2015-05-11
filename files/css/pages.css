@@ -4,10 +4,10 @@
     text-align: center;
   }
 }
-body.page-contact #content h2 {
+body.page-info #content h2 {
   margin-bottom: 5px;
 }
-body.page-contact #content p,
-body.page-contact #content address {
+body.page-info #content p,
+body.page-info #content address {
   margin-bottom: 25px;
 }

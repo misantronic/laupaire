@@ -6,6 +6,9 @@
 	<div class="widget-twitter">
 		<a href="https://twitter.com/laupaire" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false"></a>
 	</div>
+	<div class="widget-whatsapp">
+		<a href="whatsapp://send" data-text="Take a look at this awesome website:" data-href="" class="wa_btn wa_btn_s" style="display:none">Share</a>
+	</div>
 </div>
 <ul id="social-media">
 	<li>
@@ -21,7 +24,7 @@
 		<a href="https://instagram.com/laupaire/" title="Instagram"><i class="icon-instagram-with-circle"></i></a>
 	</li>
 		<li>
-			<a href="https://vimeo.com/laupaire" title="Vimeo"><i class="icon-vimeo-with-circle"></i></a>
+			<a href="http://www.amazon.de/s/ref=nb_sb_noss_2?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Daps&field-keywords=L%27Aupaire" title="Amazon"><i class="icon-amazon-with-circle"></i></a>
 		</li>
 	<li>
 		<a href="https://www.youtube.com/channel/UCcUNsaSiwvWFGgNKFjWg1kA" title="YouTube"><i class="icon-youtube-with-circle"></i></a>

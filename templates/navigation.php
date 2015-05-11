@@ -13,7 +13,7 @@
 			if ($category->hasTemplate()) {
 				$active = $category->getId() == $PATH[1] ? ' active' : '';
 
-				echo '<li role="presentation" class="'. $active .'">';
+				echo '<li role="presentation" class="'. $active .' cat-'. strtolower($category->getName()) .'">';
 				echo '	'. $category->toLink('');
 				echo '</li>';
 			}

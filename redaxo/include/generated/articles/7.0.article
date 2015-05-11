@@ -1,18 +1,18 @@
 <?php
 $REX['ART'][7]['article_id'][0] = '7';
-$REX['ART'][7]['last_update_stamp'][0] = '1431252375';
+$REX['ART'][7]['last_update_stamp'][0] = '1431302137';
 $REX['ART'][7]['pid'][0] = '7';
 $REX['ART'][7]['re_id'][0] = '0';
-$REX['ART'][7]['name'][0] = 'Contact';
-$REX['ART'][7]['catname'][0] = 'Contact';
-$REX['ART'][7]['catprior'][0] = '8';
+$REX['ART'][7]['name'][0] = 'Info';
+$REX['ART'][7]['catname'][0] = 'Info';
+$REX['ART'][7]['catprior'][0] = '2';
 $REX['ART'][7]['attributes'][0] = '';
 $REX['ART'][7]['startpage'][0] = '1';
 $REX['ART'][7]['prior'][0] = '1';
 $REX['ART'][7]['path'][0] = '|';
 $REX['ART'][7]['status'][0] = '1';
 $REX['ART'][7]['createdate'][0] = '1429645584';
-$REX['ART'][7]['updatedate'][0] = '1431252375';
+$REX['ART'][7]['updatedate'][0] = '1431302137';
 $REX['ART'][7]['template_id'][0] = '1';
 $REX['ART'][7]['clang'][0] = '0';
 $REX['ART'][7]['createuser'][0] = 'root';

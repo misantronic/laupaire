@@ -1,5 +1,6 @@
 <?php
 $name = strtolower($this->getValue("name"));
+$article = $this->getArticle();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,15 +41,13 @@ $name = strtolower($this->getValue("name"));
 		REX_TEMPLATE[id="2"]
 	</header>
 
-	<div id="content">
+	<div id="content" class="<?php if(empty($article)) { ?>empty<?php } ?>">
 		<div class="container">
 			<?php
-			$article = $this->getArticle();
-
 			// tourdates
 			$tourdate_first_pos = stripos($article, '<li class="tourdate">');
 			if($tourdate_first_pos > -1) {
-				$article = substr_replace($article, '<ul id="tourdates">', $tourdate_first_pos, 0);
+				$article = substr_replace($article, '<ul id="tourdates"><li><span class="bold">Date</span><span class="bold">City - Location</span><span class="bold text-right">Tickets</span></li>', $tourdate_first_pos, 0);
 
 				// lass occurence
 				$tourdate_last_pos = strripos($article, '</li>') + 5;
@@ -70,5 +69,6 @@ REX_TEMPLATE[id="4"]
 <?php } ?>
 
 <div id="fb-root"></div>
+<script src="//cdn.jsdelivr.net/whatsapp-sharing/1.3.2/whatsapp-button.js"></script>
 </body>
 </html>
