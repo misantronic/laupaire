@@ -47,7 +47,7 @@ $article = $this->getArticle();
 			// tourdates
 			$tourdate_first_pos = stripos($article, '<li class="tourdate">');
 			if($tourdate_first_pos > -1) {
-				$article = substr_replace($article, '<ul id="tourdates"><li><span class="bold">Date</span><span class="bold">City - Location</span><span class="bold text-right">Tickets</span></li>', $tourdate_first_pos, 0);
+				$article = substr_replace($article, '<ul id="tourdates"><li><span class="bold">Date</span><span class="bold">City</span><span class="bold">Location</span><span class="bold text-right">Tickets</span></li>', $tourdate_first_pos, 0);
 
 				// lass occurence
 				$tourdate_last_pos = strripos($article, '</li>') + 5;

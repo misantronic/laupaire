@@ -27,5 +27,16 @@ body.page-info {
         p, address {
             margin-bottom: 25px;
         }
+
+		.box {
+			float: left;
+			width: 33%;
+			margin-bottom: 50px;
+
+			@media (max-width: @screen-xs-max) {
+				float: none;
+				width: 100%;
+			}
+		}
     }
 }
