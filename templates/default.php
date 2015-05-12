@@ -6,10 +6,11 @@ $name = strtolower($this->getValue("name"));
 <head>
 	<title><?= strtoupper($REX['SERVERNAME']) .' - '.htmlspecialchars($this->getValue("name")); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="UTF-8">
 
 	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?= $REX['HTDOCS_PATH'] ?>bower_components/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="<?= $REX['HTDOCS_PATH'] ?>node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" />
+	<!--link rel="stylesheet" type="text/css" href="<?= $REX['HTDOCS_PATH'] ?>node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" /-->
 	<link rel="stylesheet" type="text/css" href="<?= $REX['HTDOCS_PATH'] ?>bower_components/fancybox/source/jquery.fancybox.css" />
 	<link rel="stylesheet" type="text/css" href="<?= $REX['HTDOCS_PATH'] ?>files/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?= $REX['HTDOCS_PATH'] ?>files/css/icons.css" />
@@ -17,7 +18,7 @@ $name = strtolower($this->getValue("name"));
 	<link rel="stylesheet" type="text/css" href="<?= $REX['HTDOCS_PATH'] ?>files/css/pages.css" />
 
 	<script type="text/javascript" src="<?= $REX['HTDOCS_PATH'] ?>bower_components/jquery/dist/jquery.min.js"></script>
-	<script type="text/javascript" src="<?= $REX['HTDOCS_PATH'] ?>node_modules/perfect-scrollbar/dist/js/min/perfect-scrollbar.jquery.min.js"></script>
+	<!--script type="text/javascript" src="<?= $REX['HTDOCS_PATH'] ?>node_modules/perfect-scrollbar/dist/js/min/perfect-scrollbar.jquery.min.js"></script-->
 	<script type="text/javascript" src="<?= $REX['HTDOCS_PATH'] ?>files/js/main.js"></script>
 	<script type="text/javascript" src="<?= $REX['HTDOCS_PATH'] ?>bower_components/benbarnett/jQuery-Animate-Enhanced/jquery.animate-enhanced.min.js"></script>
 	<script type="text/javascript" src="<?= $REX['HTDOCS_PATH'] ?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

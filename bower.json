@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "bootstrap": "~3.3.4",
-    "fancybox": "~2.1.5"
+    "fancybox": "~2.1.5",
+    "benbarnett/jQuery-Animate-Enhanced": "benbarnett/jquery-animate-enhanced#~1.1.0"
   }
 }

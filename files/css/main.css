@@ -5,18 +5,24 @@
   font-weight: normal;
   font-style: normal;
 }
-html,
-body {
-  height: 100%;
-}
 body {
   background: url(../img/palmen-hd-sm.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  overflow: hidden;
-  padding-top: 4px;
+}
+@media (max-width: 767px) {
+  body {
+    background: #93B8D2;
+    background-size: auto;
+  }
+}
+body h1 {
+  font-size: 30px;
+}
+body h2 {
+  font-size: 24px;
 }
 body h1,
 body h2 {
@@ -40,8 +46,6 @@ body .clearfix {
 }
 body > .container {
   width: 100%;
-  height: 100%;
-  position: relative;
 }
 #social-media {
   margin: 0;
