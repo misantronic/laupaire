@@ -7,6 +7,7 @@ $article = $this->getArticle();
 <head>
 	<title><?= strtoupper($REX['SERVERNAME']) .' - '.htmlspecialchars($this->getValue("name")); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="google-site-verification" content="pLNLzINOA32Ukka7MFRJFGyH6q8Y_prh9FCjvpGspF4" />
 	<meta charset="UTF-8">
 
 	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
@@ -70,5 +71,8 @@ REX_TEMPLATE[id="4"]
 
 <div id="fb-root"></div>
 <script src="//cdn.jsdelivr.net/whatsapp-sharing/1.3.2/whatsapp-button.js"></script>
+
+<!-- TRACKING -->
+REX_TEMPLATE[id="6"]
 </body>
 </html>
