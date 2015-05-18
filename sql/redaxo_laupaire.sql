@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: db1197.mydbserver.com
--- Erstellungszeit: 17. Mai 2015 um 21:04
+-- Erstellungszeit: 18. Mai 2015 um 14:46
 -- Server Version: 5.5.28
 -- PHP-Version: 5.3.29
 
@@ -19,76 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `usr_p203814_2`
 --
-
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `rex_62_params`
---
-
-CREATE TABLE IF NOT EXISTS `rex_62_params` (
-`field_id` int(10) unsigned NOT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `prior` int(10) unsigned NOT NULL,
-  `attributes` text NOT NULL,
-  `type` int(10) unsigned DEFAULT NULL,
-  `default` varchar(255) NOT NULL,
-  `params` text,
-  `validate` text,
-  `restrictions` text NOT NULL,
-  `createuser` varchar(255) NOT NULL,
-  `createdate` int(11) NOT NULL,
-  `updateuser` varchar(255) NOT NULL,
-  `updatedate` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
-
---
--- Daten für Tabelle `rex_62_params`
---
-
-INSERT INTO `rex_62_params` (`field_id`, `title`, `name`, `prior`, `attributes`, `type`, `default`, `params`, `validate`, `restrictions`, `createuser`, `createdate`, `updateuser`, `updatedate`) VALUES
-(1, 'translate:pool_file_description', 'med_description', 1, '', 2, '', '', '', '', '%USER%', 1429645436, '%USER%', 1429645436),
-(2, 'translate:pool_file_copyright', 'med_copyright', 2, '', 1, '', '', '', '', '%USER%', 1429645436, '%USER%', 1429645436),
-(3, 'translate:online_from', 'art_online_from', 1, '', 10, '', '', '', '', '%USER%', 1429645436, '%USER%', 1429645436),
-(4, 'translate:online_to', 'art_online_to', 2, '', 10, '', '', '', '', '%USER%', 1429645436, '%USER%', 1429645436),
-(5, 'translate:description', 'art_description', 3, '', 2, '', '', '', '', '%USER%', 1429645436, '%USER%', 1429645436),
-(6, 'translate:keywords', 'art_keywords', 4, '', 2, '', '', '', '', '%USER%', 1429645436, '%USER%', 1429645436),
-(7, 'translate:metadata_image', 'art_file', 5, '', 6, '', '', '', '', '%USER%', 1429645436, '%USER%', 1429645436),
-(8, 'translate:teaser', 'art_teaser', 6, '', 5, '', '', '', '', '%USER%', 1429645436, '%USER%', 1429645436),
-(9, 'translate:header_article_type', 'art_type_id', 7, 'size=1', 3, '', 'Standard|Zugriff fuer alle', '', '', '%USER%', 1429645436, '%USER%', 1429645436);
-
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `rex_62_type`
---
-
-CREATE TABLE IF NOT EXISTS `rex_62_type` (
-`id` int(10) unsigned NOT NULL,
-  `label` varchar(255) DEFAULT NULL,
-  `dbtype` varchar(255) NOT NULL,
-  `dblength` int(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
-
---
--- Daten für Tabelle `rex_62_type`
---
-
-INSERT INTO `rex_62_type` (`id`, `label`, `dbtype`, `dblength`) VALUES
-(1, 'text', 'text', 0),
-(2, 'textarea', 'text', 0),
-(3, 'select', 'varchar', 255),
-(4, 'radio', 'varchar', 255),
-(5, 'checkbox', 'varchar', 255),
-(10, 'date', 'text', 0),
-(13, 'time', 'text', 0),
-(11, 'datetime', 'text', 0),
-(12, 'legend', 'text', 0),
-(6, 'REX_MEDIA_BUTTON', 'varchar', 255),
-(7, 'REX_MEDIALIST_BUTTON', 'text', 0),
-(8, 'REX_LINK_BUTTON', 'varchar', 255),
-(9, 'REX_LINKLIST_BUTTON', 'text', 0);
 
 -- --------------------------------------------------------
 
@@ -165,28 +95,72 @@ CREATE TABLE IF NOT EXISTS `rex_375_user2group` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `rex_679_types`
+-- Tabellenstruktur für Tabelle `rex_62_params`
 --
 
-CREATE TABLE IF NOT EXISTS `rex_679_types` (
-`id` int(11) NOT NULL,
-  `status` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `description` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `rex_62_params` (
+`field_id` int(10) unsigned NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `prior` int(10) unsigned NOT NULL,
+  `attributes` text NOT NULL,
+  `type` int(10) unsigned DEFAULT NULL,
+  `default` varchar(255) NOT NULL,
+  `params` text,
+  `validate` text,
+  `restrictions` text NOT NULL,
+  `createuser` varchar(255) NOT NULL,
+  `createdate` int(11) NOT NULL,
+  `updateuser` varchar(255) NOT NULL,
+  `updatedate` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
--- Daten für Tabelle `rex_679_types`
+-- Daten für Tabelle `rex_62_params`
 --
 
-INSERT INTO `rex_679_types` (`id`, `status`, `name`, `description`) VALUES
-(1, 1, 'rex_mediapool_detail', 'Zur Darstellung von Bildern in der Detailansicht im Medienpool'),
-(2, 1, 'rex_mediapool_maximized', 'Zur Darstellung von Bildern im Medienpool wenn maximiert'),
-(3, 1, 'rex_mediapool_preview', 'Zur Darstellung der Vorschaubilder im Medienpool'),
-(4, 1, 'rex_mediabutton_preview', 'Zur Darstellung der Vorschaubilder in REX_MEDIA_BUTTON[]s'),
-(5, 1, 'rex_medialistbutton_preview', 'Zur Darstellung der Vorschaubilder in REX_MEDIALIST_BUTTON[]s'),
-(6, 0, 'thumbnail', ''),
-(7, 0, 'gallery', '');
+INSERT INTO `rex_62_params` (`field_id`, `title`, `name`, `prior`, `attributes`, `type`, `default`, `params`, `validate`, `restrictions`, `createuser`, `createdate`, `updateuser`, `updatedate`) VALUES
+(1, 'translate:pool_file_description', 'med_description', 1, '', 2, '', '', '', '', '%USER%', 1429645436, '%USER%', 1429645436),
+(2, 'translate:pool_file_copyright', 'med_copyright', 2, '', 1, '', '', '', '', '%USER%', 1429645436, '%USER%', 1429645436),
+(3, 'translate:online_from', 'art_online_from', 1, '', 10, '', '', '', '', '%USER%', 1429645436, '%USER%', 1429645436),
+(4, 'translate:online_to', 'art_online_to', 2, '', 10, '', '', '', '', '%USER%', 1429645436, '%USER%', 1429645436),
+(5, 'translate:description', 'art_description', 3, '', 2, '', '', '', '', '%USER%', 1429645436, '%USER%', 1429645436),
+(6, 'translate:keywords', 'art_keywords', 4, '', 2, '', '', '', '', '%USER%', 1429645436, '%USER%', 1429645436),
+(7, 'translate:metadata_image', 'art_file', 5, '', 6, '', '', '', '', '%USER%', 1429645436, '%USER%', 1429645436),
+(8, 'translate:teaser', 'art_teaser', 6, '', 5, '', '', '', '', '%USER%', 1429645436, '%USER%', 1429645436),
+(9, 'translate:header_article_type', 'art_type_id', 7, 'size=1', 3, '', 'Standard|Zugriff fuer alle', '', '', '%USER%', 1429645436, '%USER%', 1429645436);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `rex_62_type`
+--
+
+CREATE TABLE IF NOT EXISTS `rex_62_type` (
+`id` int(10) unsigned NOT NULL,
+  `label` varchar(255) DEFAULT NULL,
+  `dbtype` varchar(255) NOT NULL,
+  `dblength` int(11) NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+
+--
+-- Daten für Tabelle `rex_62_type`
+--
+
+INSERT INTO `rex_62_type` (`id`, `label`, `dbtype`, `dblength`) VALUES
+(1, 'text', 'text', 0),
+(2, 'textarea', 'text', 0),
+(3, 'select', 'varchar', 255),
+(4, 'radio', 'varchar', 255),
+(5, 'checkbox', 'varchar', 255),
+(10, 'date', 'text', 0),
+(13, 'time', 'text', 0),
+(11, 'datetime', 'text', 0),
+(12, 'legend', 'text', 0),
+(6, 'REX_MEDIA_BUTTON', 'varchar', 255),
+(7, 'REX_MEDIALIST_BUTTON', 'text', 0),
+(8, 'REX_LINK_BUTTON', 'varchar', 255),
+(9, 'REX_LINKLIST_BUTTON', 'text', 0);
 
 -- --------------------------------------------------------
 
@@ -218,6 +192,32 @@ INSERT INTO `rex_679_type_effects` (`id`, `type_id`, `effect`, `parameters`, `pr
 (5, 5, 'resize', 'a:6:{s:15:"rex_effect_crop";a:5:{s:21:"rex_effect_crop_width";s:0:"";s:22:"rex_effect_crop_height";s:0:"";s:28:"rex_effect_crop_offset_width";s:0:"";s:29:"rex_effect_crop_offset_height";s:0:"";s:24:"rex_effect_crop_position";s:13:"middle_center";}s:22:"rex_effect_filter_blur";a:3:{s:29:"rex_effect_filter_blur_amount";s:2:"80";s:29:"rex_effect_filter_blur_radius";s:1:"8";s:32:"rex_effect_filter_blur_threshold";s:1:"3";}s:25:"rex_effect_filter_sharpen";a:3:{s:32:"rex_effect_filter_sharpen_amount";s:2:"80";s:32:"rex_effect_filter_sharpen_radius";s:3:"0.5";s:35:"rex_effect_filter_sharpen_threshold";s:1:"3";}s:15:"rex_effect_flip";a:1:{s:20:"rex_effect_flip_flip";s:1:"X";}s:23:"rex_effect_insert_image";a:5:{s:34:"rex_effect_insert_image_brandimage";s:0:"";s:28:"rex_effect_insert_image_hpos";s:5:"right";s:28:"rex_effect_insert_image_vpos";s:6:"bottom";s:33:"rex_effect_insert_image_padding_x";s:3:"-10";s:33:"rex_effect_insert_image_padding_y";s:3:"-10";}s:17:"rex_effect_resize";a:4:{s:23:"rex_effect_resize_width";s:3:"246";s:24:"rex_effect_resize_height";s:3:"246";s:23:"rex_effect_resize_style";s:7:"maximum";s:31:"rex_effect_resize_allow_enlarge";s:11:"not_enlarge";}}', 1, 1429645437, '%USER%', 1429645437, '%USER%'),
 (6, 6, 'resize', 'a:9:{s:15:"rex_effect_crop";a:6:{s:21:"rex_effect_crop_width";s:0:"";s:22:"rex_effect_crop_height";s:0:"";s:28:"rex_effect_crop_offset_width";s:0:"";s:29:"rex_effect_crop_offset_height";s:0:"";s:20:"rex_effect_crop_hpos";s:6:"center";s:20:"rex_effect_crop_vpos";s:6:"middle";}s:22:"rex_effect_filter_blur";a:3:{s:30:"rex_effect_filter_blur_repeats";s:2:"10";s:27:"rex_effect_filter_blur_type";s:8:"gaussian";s:31:"rex_effect_filter_blur_smoothit";s:0:"";}s:25:"rex_effect_filter_sharpen";a:3:{s:32:"rex_effect_filter_sharpen_amount";s:2:"80";s:32:"rex_effect_filter_sharpen_radius";s:3:"0.5";s:35:"rex_effect_filter_sharpen_threshold";s:1:"3";}s:15:"rex_effect_flip";a:1:{s:20:"rex_effect_flip_flip";s:1:"X";}s:23:"rex_effect_insert_image";a:5:{s:34:"rex_effect_insert_image_brandimage";s:0:"";s:28:"rex_effect_insert_image_hpos";s:4:"left";s:28:"rex_effect_insert_image_vpos";s:3:"top";s:33:"rex_effect_insert_image_padding_x";s:3:"-10";s:33:"rex_effect_insert_image_padding_y";s:3:"-10";}s:17:"rex_effect_mirror";a:5:{s:24:"rex_effect_mirror_height";s:0:"";s:33:"rex_effect_mirror_set_transparent";s:7:"colored";s:22:"rex_effect_mirror_bg_r";s:0:"";s:22:"rex_effect_mirror_bg_g";s:0:"";s:22:"rex_effect_mirror_bg_b";s:0:"";}s:17:"rex_effect_resize";a:4:{s:23:"rex_effect_resize_width";s:3:"380";s:24:"rex_effect_resize_height";s:0:"";s:23:"rex_effect_resize_style";s:7:"maximum";s:31:"rex_effect_resize_allow_enlarge";s:7:"enlarge";}s:26:"rex_effect_rounded_corners";a:4:{s:34:"rex_effect_rounded_corners_topleft";s:0:"";s:35:"rex_effect_rounded_corners_topright";s:0:"";s:37:"rex_effect_rounded_corners_bottomleft";s:0:"";s:38:"rex_effect_rounded_corners_bottomright";s:0:"";}s:20:"rex_effect_workspace";a:8:{s:26:"rex_effect_workspace_width";s:0:"";s:27:"rex_effect_workspace_height";s:0:"";s:25:"rex_effect_workspace_hpos";s:4:"left";s:25:"rex_effect_workspace_vpos";s:3:"top";s:36:"rex_effect_workspace_set_transparent";s:7:"colored";s:25:"rex_effect_workspace_bg_r";s:0:"";s:25:"rex_effect_workspace_bg_g";s:0:"";s:25:"rex_effect_workspace_bg_b";s:0:"";}}', 1, 1431090957, 'root', 1431090957, 'root'),
 (7, 7, 'resize', 'a:9:{s:15:"rex_effect_crop";a:6:{s:21:"rex_effect_crop_width";s:0:"";s:22:"rex_effect_crop_height";s:0:"";s:28:"rex_effect_crop_offset_width";s:0:"";s:29:"rex_effect_crop_offset_height";s:0:"";s:20:"rex_effect_crop_hpos";s:6:"center";s:20:"rex_effect_crop_vpos";s:6:"middle";}s:22:"rex_effect_filter_blur";a:3:{s:30:"rex_effect_filter_blur_repeats";s:2:"10";s:27:"rex_effect_filter_blur_type";s:8:"gaussian";s:31:"rex_effect_filter_blur_smoothit";s:0:"";}s:25:"rex_effect_filter_sharpen";a:3:{s:32:"rex_effect_filter_sharpen_amount";s:2:"80";s:32:"rex_effect_filter_sharpen_radius";s:3:"0.5";s:35:"rex_effect_filter_sharpen_threshold";s:1:"3";}s:15:"rex_effect_flip";a:1:{s:20:"rex_effect_flip_flip";s:1:"X";}s:23:"rex_effect_insert_image";a:5:{s:34:"rex_effect_insert_image_brandimage";s:0:"";s:28:"rex_effect_insert_image_hpos";s:4:"left";s:28:"rex_effect_insert_image_vpos";s:3:"top";s:33:"rex_effect_insert_image_padding_x";s:3:"-10";s:33:"rex_effect_insert_image_padding_y";s:3:"-10";}s:17:"rex_effect_mirror";a:5:{s:24:"rex_effect_mirror_height";s:0:"";s:33:"rex_effect_mirror_set_transparent";s:7:"colored";s:22:"rex_effect_mirror_bg_r";s:0:"";s:22:"rex_effect_mirror_bg_g";s:0:"";s:22:"rex_effect_mirror_bg_b";s:0:"";}s:17:"rex_effect_resize";a:4:{s:23:"rex_effect_resize_width";s:4:"1920";s:24:"rex_effect_resize_height";s:4:"1080";s:23:"rex_effect_resize_style";s:7:"maximum";s:31:"rex_effect_resize_allow_enlarge";s:11:"not_enlarge";}s:26:"rex_effect_rounded_corners";a:4:{s:34:"rex_effect_rounded_corners_topleft";s:0:"";s:35:"rex_effect_rounded_corners_topright";s:0:"";s:37:"rex_effect_rounded_corners_bottomleft";s:0:"";s:38:"rex_effect_rounded_corners_bottomright";s:0:"";}s:20:"rex_effect_workspace";a:8:{s:26:"rex_effect_workspace_width";s:0:"";s:27:"rex_effect_workspace_height";s:0:"";s:25:"rex_effect_workspace_hpos";s:4:"left";s:25:"rex_effect_workspace_vpos";s:3:"top";s:36:"rex_effect_workspace_set_transparent";s:7:"colored";s:25:"rex_effect_workspace_bg_r";s:0:"";s:25:"rex_effect_workspace_bg_g";s:0:"";s:25:"rex_effect_workspace_bg_b";s:0:"";}}', 1, 1431091033, 'root', 1431091033, 'root');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `rex_679_types`
+--
+
+CREATE TABLE IF NOT EXISTS `rex_679_types` (
+`id` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+--
+-- Daten für Tabelle `rex_679_types`
+--
+
+INSERT INTO `rex_679_types` (`id`, `status`, `name`, `description`) VALUES
+(1, 1, 'rex_mediapool_detail', 'Zur Darstellung von Bildern in der Detailansicht im Medienpool'),
+(2, 1, 'rex_mediapool_maximized', 'Zur Darstellung von Bildern im Medienpool wenn maximiert'),
+(3, 1, 'rex_mediapool_preview', 'Zur Darstellung der Vorschaubilder im Medienpool'),
+(4, 1, 'rex_mediabutton_preview', 'Zur Darstellung der Vorschaubilder in REX_MEDIA_BUTTON[]s'),
+(5, 1, 'rex_medialistbutton_preview', 'Zur Darstellung der Vorschaubilder in REX_MEDIALIST_BUTTON[]s'),
+(6, 0, 'thumbnail', ''),
+(7, 0, 'gallery', '');
 
 -- --------------------------------------------------------
 
@@ -295,7 +295,7 @@ INSERT INTO `rex_article` (`pid`, `id`, `re_id`, `name`, `catname`, `catprior`, 
 (3, 3, 0, 'Video', 'Video', 4, '', 1, 1, '|', 1, 1429645581, 1431094219, 1, 0, 'root', 'root', 0, NULL, NULL, NULL, NULL, '', '', ''),
 (4, 4, 0, 'Live', 'Live', 6, '', 1, 1, '|', 1, 1429645582, 1431304954, 1, 0, 'root', 'root', 0, NULL, NULL, NULL, NULL, '', '', ''),
 (6, 6, 0, 'Shop', 'Shop', 7, '', 1, 1, '|', 0, 1431052078, 1429645575, 1, 0, 'root', 'root', 0, NULL, NULL, NULL, NULL, '', '', ''),
-(7, 7, 0, 'Info', 'Info', 2, '', 1, 1, '|', 1, 1429645584, 1431888984, 1, 0, 'root', 'root', 0, NULL, NULL, NULL, NULL, '', '', ''),
+(7, 7, 0, 'Info', 'Info', 2, '', 1, 1, '|', 1, 1429645584, 1431952939, 1, 0, 'root', 'root', 0, NULL, NULL, NULL, NULL, '', '', ''),
 (9, 8, 0, 'Photos', 'Photos', 5, '', 1, 1, '|', 1, 1431095131, 1431302158, 1, 0, 'root', 'root', 0, NULL, NULL, NULL, NULL, '', '', ''),
 (10, 9, 0, 'Newsletter', 'Newsletter', 8, '', 1, 1, '|', 1, 1431460010, 1431460216, 1, 0, 'root', 'root', 0, NULL, NULL, NULL, NULL, '', '', '');
 
@@ -380,7 +380,7 @@ CREATE TABLE IF NOT EXISTS `rex_article_slice` (
   `updateuser` varchar(255) NOT NULL,
   `next_article_slice_id` int(11) DEFAULT NULL,
   `revision` int(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `rex_article_slice`
@@ -392,7 +392,7 @@ INSERT INTO `rex_article_slice` (`id`, `clang`, `ctype`, `re_article_slice_id`, 
 (38, 0, 1, 37, 'https://open.spotify.com/track/4qEEmRK9xYUn1YmOgvAyLQ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 2, 16, 1431304250, 1431304312, 'root', 'root', NULL, 0),
 (25, 0, 1, 24, 'https://www.youtube.com/watch?v=VeeINpadQLI', 'Keep On Steppin Boy live', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'video-4.jpg', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 3, 10, 1431093103, 1431094219, 'root', 'root', NULL, 0),
 (24, 0, 1, 23, 'https://www.youtube.com/watch?v=hkZFEKaXCg8', 'Always Travelling live', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'video-3.jpg', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 3, 10, 1431093057, 1431094212, 'root', 'root', NULL, 0),
-(10, 0, 1, 0, '<h2>Info</h2>\r\n<p><a href="mailto:vasb@ynhcnver.pbz" class="email"><span style="display:none"></span>info<span style="display:none"></span>@<span style="display:none"></span>laupaire<span style="display:none"></span>.<span style="display:none"></span>com</a></p>\r\n\r\n<div class="box">\r\n	<h2>Management</h2>\r\n	<address>\r\n		<b>Lapidar Management</b><br/>\r\n		Giulia Hauck<br/>\r\n		Dieffenbachstraße 33<br/>\r\n		10967 Berlin<br/>\r\n		<a href="mailto:tvhyvn@yncvqne-znantrzrag.pbz" class="email"><span style="display:none"></span>giulia<span style="display:none"></span>@<span style="display:none"></span>lapidar-management<span style="display:none"></span>.<span style="display:none"></span>com</a>\r\n	</address>\r\n</div>\r\n\r\n<div class="box">\r\n	<h2>Booking</h2>\r\n	<address>\r\n		<b>Moderne Welt</b><br/>\r\n		Andreas Pese Puscher<br/>\r\n		Warschauer Str. 39/40<br/>\r\n		10243 Berlin<br/>\r\n		<a href="mailto:n.chfpure@zbqrearjryg.qr" class="email"><span style="display:none"></span>a.puscher<span style="display:none"></span>@<span style="display:none"></span>modernewelt<span style="display:none"></span>.<span style="display:none"></span>de</a>\r\n	</address>\r\n</div>\r\n\r\n<div class="box">\r\n	<h2>Label</h2>\r\n	<address>\r\n		<b>Virgin Records</b><br/>\r\n		Köpenicker Str. 154 A<br/>\r\n		10997 Berlin<br/>\r\n		<a href="mailto:vasb@ivetva-erpbeqf.qr" class="email"><span style="display:none"></span>info<span style="display:none"></span>@<span style="display:none"></span>virgin-records<span style="display:none"></span>.<span style="display:none"></span>de</a>\r\n	</address>\r\n</div>\r\n\r\n<br class="clearfix"/>\r\n\r\n<h2>Impressum</h2>\r\n<p>\r\n	Angaben gemäß § 5 TMG:<br/>\r\n	Robert Laupert<br/>\r\n	Kontakt: <br/>\r\n	..\r\n</p>\r\n<p>\r\nVerantwortlich für den Inhalt nach § 55 Abs. 2 RStV:\r\nRobert Laupert\r\n</p>\r\n<p>\r\nHaftungsausschluss: \r\n</p>\r\n<p>\r\nHaftung für Inhalte<br/>\r\nDie Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.\r\n</p>\r\n<p>\r\nHaftung für Links<br/>\r\nUnser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.\r\n</p>\r\n<p>\r\nUrheberrecht<br/>\r\nDie durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.\r\n</p>\r\n<p>\r\nDatenschutz<br/>\r\nPersonenbezogene Daten werden nur mit Ihrem Wissen und Ihrer Einwilligung erhoben, z.B. beim Bestellvorgang im Shop und bei unserem Newsletter-Angebot.\r\nDer Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.\r\n</p>\r\n<p>\r\nGoogle Analytics<br/>\r\nDiese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. (''''Google''''). Google Analytics verwendet sog. ''''Cookies'''', Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglicht. Die durch den Cookie erzeugten Informationen über Ihre Benutzung diese Website (einschließlich Ihrer IP-Adresse) wird an einen Server von Google in den USA übertragen und dort gespeichert. Google wird diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten für die Websitebetreiber zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen zu erbringen. Auch wird Google diese Informationen gegebenenfalls an Dritte übertragen, sofern dies gesetzlich vorgeschrieben oder soweit Dritte diese Daten im Auftrag von Google verarbeiten. Google wird in keinem Fall Ihre IP-Adresse mit anderen Daten der Google in Verbindung bringen. Sie können die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website voll umfänglich nutzen können. Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.\r\n</p>', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 7, 11, 1431007901, 1431888984, 'root', 'root', NULL, 0),
+(10, 0, 1, 40, '<h2>Info</h2>\r\n<p><a href="mailto:vasb@ynhcnver.pbz" class="email"><span style="display:none"></span>info<span style="display:none"></span>@<span style="display:none"></span>laupaire<span style="display:none"></span>.<span style="display:none"></span>com</a></p>\r\n\r\n<div class="box">\r\n	<h2>Management</h2>\r\n	<address>\r\n		<b>Lapidar Management</b><br/>\r\n		Giulia Hauck<br/>\r\n		Dieffenbachstraße 33<br/>\r\n		10967 Berlin<br/>\r\n		<a href="mailto:tvhyvn@yncvqne-znantrzrag.pbz" class="email"><span style="display:none"></span>giulia<span style="display:none"></span>@<span style="display:none"></span>lapidar-management<span style="display:none"></span>.<span style="display:none"></span>com</a>\r\n	</address>\r\n</div>\r\n\r\n<div class="box">\r\n	<h2>Booking</h2>\r\n	<address>\r\n		<b>Moderne Welt</b><br/>\r\n		Andreas Pese Puscher<br/>\r\n		Warschauer Str. 39/40<br/>\r\n		10243 Berlin<br/>\r\n		<a href="mailto:n.chfpure@zbqrearjryg.qr" class="email"><span style="display:none"></span>a.puscher<span style="display:none"></span>@<span style="display:none"></span>modernewelt<span style="display:none"></span>.<span style="display:none"></span>de</a>\r\n	</address>\r\n</div>\r\n\r\n<div class="box">\r\n	<h2>Label</h2>\r\n	<address>\r\n		<b>Virgin Records</b><br/>\r\n		Köpenicker Str. 154 A<br/>\r\n		10997 Berlin<br/>\r\n		<a href="mailto:vasb@ivetva-erpbeqf.qr" class="email"><span style="display:none"></span>info<span style="display:none"></span>@<span style="display:none"></span>virgin-records<span style="display:none"></span>.<span style="display:none"></span>de</a>\r\n	</address>\r\n</div>\r\n\r\n<br class="clearfix"/>\r\n\r\n<h2>Impressum</h2>\r\n<p>\r\n	Angaben gemäß § 5 TMG:<br/>\r\n	Robert Laupert<br/>\r\n	Kontakt: <br/>\r\n	..\r\n</p>\r\n<p>\r\nVerantwortlich für den Inhalt nach § 55 Abs. 2 RStV:\r\nRobert Laupert\r\n</p>\r\n<p>\r\nHaftungsausschluss: \r\n</p>\r\n<p>\r\nHaftung für Inhalte<br/>\r\nDie Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.\r\n</p>\r\n<p>\r\nHaftung für Links<br/>\r\nUnser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.\r\n</p>\r\n<p>\r\nUrheberrecht<br/>\r\nDie durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.\r\n</p>\r\n<p>\r\nDatenschutz<br/>\r\nPersonenbezogene Daten werden nur mit Ihrem Wissen und Ihrer Einwilligung erhoben, z.B. beim Bestellvorgang im Shop und bei unserem Newsletter-Angebot.\r\nDer Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.\r\n</p>\r\n<p>\r\nGoogle Analytics<br/>\r\nDiese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. (''''Google''''). Google Analytics verwendet sog. ''''Cookies'''', Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglicht. Die durch den Cookie erzeugten Informationen über Ihre Benutzung diese Website (einschließlich Ihrer IP-Adresse) wird an einen Server von Google in den USA übertragen und dort gespeichert. Google wird diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten für die Websitebetreiber zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen zu erbringen. Auch wird Google diese Informationen gegebenenfalls an Dritte übertragen, sofern dies gesetzlich vorgeschrieben oder soweit Dritte diese Daten im Auftrag von Google verarbeiten. Google wird in keinem Fall Ihre IP-Adresse mit anderen Daten der Google in Verbindung bringen. Sie können die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website voll umfänglich nutzen können. Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.\r\n</p>', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 7, 11, 1431007901, 1431888984, 'root', 'root', NULL, 0),
 (11, 0, 1, 0, '2015-05-22', 'Dortmund', 'Way Back When', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 4, 12, 1431074136, 1431304954, 'root', 'root', NULL, 0),
 (12, 0, 1, 11, '2015-06-19', 'Duisburg', 'Traumzeit', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 4, 12, 1431074187, 1431075441, 'root', 'root', NULL, 0),
 (13, 0, 1, 12, '2015-06-20', 'Würzburg', 'U&D', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 4, 12, 1431074217, 1431075461, 'root', 'root', NULL, 0),
@@ -410,7 +410,8 @@ INSERT INTO `rex_article_slice` (`id`, `clang`, `ctype`, `re_article_slice_id`, 
 (36, 0, 1, 28, 'https://open.spotify.com/track/5MpHD0mgEJihrEtemavF5A', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 2, 16, 1431303852, 1431304303, 'root', 'root', NULL, 0),
 (37, 0, 1, 36, 'https://open.spotify.com/track/27eetGZbp2u0nsTKoawNxg', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 2, 16, 1431304236, 1431304308, 'root', 'root', NULL, 0),
 (34, 0, 1, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 9, 14, 1431460216, 1431460216, 'root', 'root', NULL, 0),
-(39, 0, 1, 31, '<SCRIPT charset="utf-8" type="text/javascript" src="http://ws-na.amazon-adsystem.com/widgets/q?rt=tf_w_mpw&ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Fwidgetsamazon-20%2F8014%2F419e65e9-ce10-4110-9886-11547e629116&Operation=GetScriptTemplate"> </SCRIPT> <NOSCRIPT><A HREF="http://ws-na.amazon-adsystem.com/widgets/q?rt=tf_w_mpw&ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Fwidgetsamazon-20%2F8014%2F419e65e9-ce10-4110-9886-11547e629116&Operation=NoScript">Amazon.com Widgets</A></NOSCRIPT>', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 2, 11, 1431872934, 1431872934, 'root', 'root', NULL, 0);
+(39, 0, 1, 31, '<SCRIPT charset="utf-8" type="text/javascript" src="http://ws-na.amazon-adsystem.com/widgets/q?rt=tf_w_mpw&ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Fwidgetsamazon-20%2F8014%2F419e65e9-ce10-4110-9886-11547e629116&Operation=GetScriptTemplate"> </SCRIPT> <NOSCRIPT><A HREF="http://ws-na.amazon-adsystem.com/widgets/q?rt=tf_w_mpw&ServiceVersion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Fwidgetsamazon-20%2F8014%2F419e65e9-ce10-4110-9886-11547e629116&Operation=NoScript">Amazon.com Widgets</A></NOSCRIPT>', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 2, 11, 1431872934, 1431872934, 'root', 'root', NULL, 0),
+(40, 0, 1, 0, '<h1>L''Aupaire</h1>\r\n<p>In early 2013 singer and multi-instrumentalist Robert Laupert loaded all his belongings into a van and drove to Budapest, to create his very own music in the relative solitude of this foreign city. Drums, guitars, pedal steel, piano, sepia-coloured brass – Laupert played all of them himself, in the little apartment in the Jewish quarter, and interweaved them into a both natural and mysterious musical tapestry. This time in Budapest constituted the origin of L’aupaire.</p>\r\n<p>He sings from the perspective of a songwriter, he mixes a secret into his songs, tender and approachable at times, and now and then with the guttural brokenness of the old blues-masters. Because Laupert consequently searched and found his very own, we can now experience it. First to Budapest, then to the inside, and now out into the world.</p>\r\n<br/><br/><br/><br/>', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 7, 11, 1431952918, 1431952939, 'root', 'root', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -693,17 +694,18 @@ CREATE TABLE IF NOT EXISTS `rex_template` (
   `updatedate` int(11) NOT NULL,
   `attributes` text,
   `revision` int(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `rex_template`
 --
 
 INSERT INTO `rex_template` (`id`, `label`, `name`, `content`, `active`, `createuser`, `updateuser`, `createdate`, `updatedate`, `attributes`, `revision`) VALUES
-(1, NULL, 'Default', '<?php\r\n$name = strtolower($this->getValue("name"));\r\n$article = $this->getArticle();\r\n?>\r\n<!DOCTYPE html>\r\n<html lang="en">\r\n<head>\r\n	<title><?= strtoupper($REX[''SERVERNAME'']) .'' - ''.htmlspecialchars($this->getValue("name")); ?></title>\r\n	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">\r\n	<meta charset="UTF-8">\r\n\r\n	<link href=''http://fonts.googleapis.com/css?family=Raleway'' rel=''stylesheet'' type=''text/css''>\r\n	<link rel="stylesheet" href="<?= $REX[''HTDOCS_PATH''] ?>bower_components/bootstrap/dist/css/bootstrap.min.css">\r\n	<link rel="stylesheet" type="text/css" href="<?= $REX[''HTDOCS_PATH''] ?>bower_components/fancybox/source/jquery.fancybox.css" />\r\n	<link rel="stylesheet" type="text/css" href="<?= $REX[''HTDOCS_PATH''] ?>files/css/main.css" />\r\n	<link rel="stylesheet" type="text/css" href="<?= $REX[''HTDOCS_PATH''] ?>files/css/icons.css" />\r\n	<link rel="stylesheet" type="text/css" href="<?= $REX[''HTDOCS_PATH''] ?>files/css/modules.css" />\r\n	<link rel="stylesheet" type="text/css" href="<?= $REX[''HTDOCS_PATH''] ?>files/css/pages.css" />\r\n\r\n	<script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>bower_components/jquery/dist/jquery.min.js"></script>\r\n	<script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>files/js/main.js"></script>\r\n	<script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>bower_components/benbarnett/jQuery-Animate-Enhanced/jquery.animate-enhanced.min.js"></script>\r\n	<!--script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>node_modules/hammerjs/hammer.min.js"></script-->\r\n	<!--script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>node_modules/jquery-hammerjs/jquery.hammer.js"></script-->\r\n	<script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script>\r\n	<script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>bower_components/fancybox/source/jquery.fancybox.pack.js"></script>\r\n	<script src="//www.youtube.com/player_api"></script>\r\n\r\n	<?php if($name == ''video'') { ?>\r\n		<script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>files/js/video.js"></script>\r\n	<?php } ?>\r\n	<script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>files/js/gallery.js"></script>\r\n</head>\r\n\r\n<body class="page-<?= $name ?>">\r\n<div id="wrapper" class="container">\r\n	<header>\r\n		<div class="bg"></div>\r\n		<div id="logo"><a href="<?php echo $REX[''HTDOCS_PATH''] ?>">L`Aupaire</a></div>\r\n		<!-- NAV -->\r\n		REX_TEMPLATE[id="2"]\r\n	</header>\r\n\r\n	<div id="content" class="<?php if(empty($article)) { ?>empty<?php } ?>">\r\n		<div class="container">\r\n			<?php\r\n			// tourdates\r\n			$tourdate_first_pos = stripos($article, ''<li class="tourdate">'');\r\n			if($tourdate_first_pos > -1) {\r\n				$article = substr_replace($article, ''<ul id="tourdates"><li><span class="bold">Date</span><span class="bold">City</span><span class="bold">Location</span><span class="bold text-right">Tickets</span></li>'', $tourdate_first_pos, 0);\r\n\r\n				// lass occurence\r\n				$tourdate_last_pos = strripos($article, ''</li>'') + 5;\r\n				$article = substr_replace($article, ''</ul>'', $tourdate_last_pos, 0);\r\n			}\r\n\r\n			echo $article;\r\n			?>\r\n		</div>\r\n	</div>\r\n</div>\r\n\r\n<!-- SOCIAL MEDIA -->\r\nREX_TEMPLATE[id="4"]\r\n\r\n<?php if($name != ''newsletter'') { ?>\r\n	<!-- NEWSLETTER -->\r\n	REX_TEMPLATE[id="5"]\r\n<?php } ?>\r\n\r\n<div id="fb-root"></div>\r\n<script src="//cdn.jsdelivr.net/whatsapp-sharing/1.3.2/whatsapp-button.js"></script>\r\n</body>\r\n</html>\r\n', 1, 'root', 'root', 1431888675, 1431888675, 'a:3:{s:10:"categories";a:1:{s:3:"all";s:1:"1";}s:5:"ctype";a:0:{}s:7:"modules";a:1:{i:1;a:1:{s:3:"all";s:1:"1";}}}', 0),
+(1, NULL, 'Default', '<?php\r\n$name = strtolower($this->getValue("name"));\r\n$article = $this->getArticle();\r\n?>\r\n<!DOCTYPE html>\r\n<html lang="en">\r\n<head>\r\n	<title><?= strtoupper($REX[''SERVERNAME'']) .'' - ''.htmlspecialchars($this->getValue("name")); ?></title>\r\n	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">\r\n    <meta name="google-site-verification" content="pLNLzINOA32Ukka7MFRJFGyH6q8Y_prh9FCjvpGspF4" />\r\n	<meta charset="UTF-8">\r\n\r\n	<link href=''http://fonts.googleapis.com/css?family=Raleway'' rel=''stylesheet'' type=''text/css''>\r\n	<link rel="stylesheet" href="<?= $REX[''HTDOCS_PATH''] ?>bower_components/bootstrap/dist/css/bootstrap.min.css">\r\n	<link rel="stylesheet" type="text/css" href="<?= $REX[''HTDOCS_PATH''] ?>bower_components/fancybox/source/jquery.fancybox.css" />\r\n	<link rel="stylesheet" type="text/css" href="<?= $REX[''HTDOCS_PATH''] ?>files/css/main.css" />\r\n	<link rel="stylesheet" type="text/css" href="<?= $REX[''HTDOCS_PATH''] ?>files/css/icons.css" />\r\n	<link rel="stylesheet" type="text/css" href="<?= $REX[''HTDOCS_PATH''] ?>files/css/modules.css" />\r\n	<link rel="stylesheet" type="text/css" href="<?= $REX[''HTDOCS_PATH''] ?>files/css/pages.css" />\r\n\r\n	<script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>bower_components/jquery/dist/jquery.min.js"></script>\r\n	<script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>files/js/main.js"></script>\r\n	<script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>bower_components/benbarnett/jQuery-Animate-Enhanced/jquery.animate-enhanced.min.js"></script>\r\n	<!--script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>node_modules/hammerjs/hammer.min.js"></script-->\r\n	<!--script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>node_modules/jquery-hammerjs/jquery.hammer.js"></script-->\r\n	<script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script>\r\n	<script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>bower_components/fancybox/source/jquery.fancybox.pack.js"></script>\r\n	<script src="//www.youtube.com/player_api"></script>\r\n\r\n	<?php if($name == ''video'') { ?>\r\n		<script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>files/js/video.js"></script>\r\n	<?php } ?>\r\n	<script type="text/javascript" src="<?= $REX[''HTDOCS_PATH''] ?>files/js/gallery.js"></script>\r\n</head>\r\n\r\n<body class="page-<?= $name ?>">\r\n<div id="wrapper" class="container">\r\n	<header>\r\n		<div class="bg"></div>\r\n		<div id="logo"><a href="<?php echo $REX[''HTDOCS_PATH''] ?>">L`Aupaire</a></div>\r\n		<!-- NAV -->\r\n		REX_TEMPLATE[id="2"]\r\n	</header>\r\n\r\n	<div id="content" class="<?php if(empty($article)) { ?>empty<?php } ?>">\r\n		<div class="container">\r\n			<?php\r\n			// tourdates\r\n			$tourdate_first_pos = stripos($article, ''<li class="tourdate">'');\r\n			if($tourdate_first_pos > -1) {\r\n				$article = substr_replace($article, ''<ul id="tourdates"><li><span class="bold">Date</span><span class="bold">City</span><span class="bold">Location</span><span class="bold text-right">Tickets</span></li>'', $tourdate_first_pos, 0);\r\n\r\n				// lass occurence\r\n				$tourdate_last_pos = strripos($article, ''</li>'') + 5;\r\n				$article = substr_replace($article, ''</ul>'', $tourdate_last_pos, 0);\r\n			}\r\n\r\n			echo $article;\r\n			?>\r\n		</div>\r\n	</div>\r\n</div>\r\n\r\n<!-- SOCIAL MEDIA -->\r\nREX_TEMPLATE[id="4"]\r\n\r\n<?php if($name != ''newsletter'') { ?>\r\n	<!-- NEWSLETTER -->\r\n	REX_TEMPLATE[id="5"]\r\n<?php } ?>\r\n\r\n<div id="fb-root"></div>\r\n<script src="//cdn.jsdelivr.net/whatsapp-sharing/1.3.2/whatsapp-button.js"></script>\r\n\r\n<!-- TRACKING -->\r\nREX_TEMPLATE[id="6"]\r\n</body>\r\n</html>\r\n', 1, 'root', 'root', 1431953108, 1431953108, 'a:3:{s:10:"categories";a:1:{s:3:"all";s:1:"1";}s:5:"ctype";a:0:{}s:7:"modules";a:1:{i:1;a:1:{s:3:"all";s:1:"1";}}}', 0),
 (2, NULL, 'Navigation', '<button type="button" id="navbar-toggle" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">\r\n	<span class="sr-only">Toggle navigation</span>\r\n	<span class="icon-bar"></span>\r\n	<span class="icon-bar"></span>\r\n	<span class="icon-bar"></span>\r\n</button>\r\n<nav id="navbar" class="navbar-collapse collapse">\r\n	<ul class="nav navbar-nav">\r\n		<?php\r\n		$PATH = explode("|",$this->getValue("path").$this->getValue("article_id")."|");\r\n\r\n		foreach (OOCategory::getRootCategories(true) as $category) {\r\n			if ($category->hasTemplate()) {\r\n				$active = $category->getId() == $PATH[1] ? '' active'' : '''';\r\n\r\n				echo ''<li role="presentation" class="''. $active .'' cat-''. strtolower($category->getName()) .''">'';\r\n				echo ''	''. $category->toLink('''');\r\n				echo ''</li>'';\r\n			}\r\n		}\r\n		?>\r\n	</ul>\r\n</nav>', 0, 'root', 'root', 1431302287, 1431302287, 'a:3:{s:10:"categories";a:1:{s:3:"all";s:1:"1";}s:5:"ctype";a:0:{}s:7:"modules";a:1:{i:1;a:1:{s:3:"all";s:1:"1";}}}', 0),
 (4, NULL, 'Social Media', '<div id="widgets">\r\n	<div class="widget-whatsapp">\r\n		<a href="whatsapp://send" data-text="Take a look at this awesome website:" data-href="" class="wa_btn wa_btn_s" style="display:none">Share</a>\r\n	</div>\r\n	<div class="widget-spotify"></div>\r\n	<div class="widget-facebook">\r\n		<div class="fb-like" data-href="https://www.facebook.com/laupaire" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>\r\n	</div>\r\n	<div class="widget-twitter">\r\n		<a href="https://twitter.com/laupaire" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false"></a>\r\n	</div>\r\n</div>\r\n<ul id="social-media">\r\n	<li>\r\n		<a href="https://www.facebook.com/laupaire" title="Facebook"><i class="icon-facebook-with-circle"></i></a>\r\n	</li>\r\n	<li>\r\n		<a href="https://www.twitter.com/laupaire" title="Twitter"><i class="icon-twitter-with-circle"></i></a>\r\n	</li>\r\n	<li>\r\n		<a href="https://plus.google.com/106042085947517840852/about" title="Google+"><i class="icon-google-with-circle"></i></a>\r\n	</li>\r\n	<li>\r\n		<a href="https://instagram.com/laupaire/" title="Instagram"><i class="icon-instagram-with-circle"></i></a>\r\n	</li>\r\n		<li>\r\n			<a href="http://www.amazon.de/s/ref=nb_sb_noss_2?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Daps&field-keywords=L%27Aupaire" title="Amazon"><i class="icon-amazon-with-circle"></i></a>\r\n		</li>\r\n	<li>\r\n		<a href="https://www.youtube.com/channel/UCcUNsaSiwvWFGgNKFjWg1kA" title="YouTube"><i class="icon-youtube-with-circle"></i></a>\r\n	</li>\r\n	<li>\r\n		<a href="https://open.spotify.com/artist/6d9XIbBseVi999qdzDEtwE" title="Spotify"><i class="icon-spotify-with-circle"></i></a>\r\n	</li>\r\n</ul>', 0, 'root', 'root', 1431303121, 1431303121, 'a:3:{s:10:"categories";a:1:{s:3:"all";s:1:"1";}s:5:"ctype";a:0:{}s:7:"modules";a:1:{i:1;a:1:{s:3:"all";s:1:"1";}}}', 0),
-(5, NULL, 'Newsletter', '<div id="newsletter">\r\n	<div class="newsletter-wrapper">\r\n		<h2>Newsletter</h2>\r\n		<form id="form-subscribe" action="subscribe.php" method="post">\r\n			<div class="form-group">\r\n				<label for="txt-email">\r\n					<input id="txt-email" type="email" class="form-control" autocomplete="off" placeholder="E-Mail address..." required="required" />\r\n				</label>\r\n				<input class="btn-subscribe btn btn-default" type="submit" value="Subscribe"/>\r\n				<span class="icon-loader"></span>\r\n			</div>\r\n		</form>\r\n	</div>\r\n</div>\r\n', 0, 'root', 'root', 1431466166, 1431466166, 'a:3:{s:10:"categories";a:1:{s:3:"all";s:1:"1";}s:5:"ctype";a:0:{}s:7:"modules";a:1:{i:1;a:1:{s:3:"all";s:1:"1";}}}', 0);
+(5, NULL, 'Newsletter', '<div id="newsletter">\r\n	<div class="newsletter-wrapper">\r\n		<h2>Newsletter</h2>\r\n		<form id="form-subscribe" action="subscribe.php" method="post">\r\n			<div class="form-group">\r\n				<label for="txt-email">\r\n					<input id="txt-email" type="email" class="form-control" autocomplete="off" placeholder="E-Mail address..." required="required" />\r\n				</label>\r\n				<input class="btn-subscribe btn btn-default" type="submit" value="Subscribe"/>\r\n				<span class="icon-loader"></span>\r\n			</div>\r\n		</form>\r\n	</div>\r\n</div>\r\n', 0, 'root', 'root', 1431466166, 1431466166, 'a:3:{s:10:"categories";a:1:{s:3:"all";s:1:"1";}s:5:"ctype";a:0:{}s:7:"modules";a:1:{i:1;a:1:{s:3:"all";s:1:"1";}}}', 0),
+(6, NULL, 'Tracking', '<script>\r\n    (function(i,s,o,g,r,a,m){i[''GoogleAnalyticsObject'']=r;i[r]=i[r]||function(){\r\n        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\r\n        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\r\n    })(window,document,''script'',''//www.google-analytics.com/analytics.js'',''ga'');\r\n\r\n    ga(''create'', ''UA-51165386-6'', ''auto'');\r\n    ga(''send'', ''pageview'');\r\n</script>\r\n<script type="text/javascript">\r\n    /* <![CDATA[ */\r\n    var google_conversion_id = 1015801416;\r\n    var google_conversion_label = "ecT_CLbDnVkQyMyv5AM";\r\n    var google_custom_params = window.google_tag_params;\r\n    var google_remarketing_only = true;\r\n    /* ]]> */\r\n</script>\r\n<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">\r\n</script>\r\n<noscript>\r\n    <div style="display:inline;">\r\n        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1015801416/?value=1.00&amp;currency_code=EUR&amp;label=ecT_CLbDnVkQyMyv5AM&amp;guid=ON&amp;script=0"/>\r\n    </div>\r\n</noscript>', 0, 'root', '', 1431953036, 0, 'a:3:{s:5:"ctype";a:0:{}s:7:"modules";a:1:{i:1;a:1:{s:3:"all";s:1:"1";}}s:10:"categories";a:1:{s:3:"all";s:1:"1";}}', 0);
 
 -- --------------------------------------------------------
 
@@ -735,23 +737,11 @@ CREATE TABLE IF NOT EXISTS `rex_user` (
 --
 
 INSERT INTO `rex_user` (`user_id`, `name`, `description`, `login`, `psw`, `status`, `rights`, `login_tries`, `createuser`, `updateuser`, `createdate`, `updatedate`, `lasttrydate`, `session_id`, `cookiekey`, `revision`) VALUES
-(1, 'Administrator', '', 'root', 'dc76e9f0c0006e8f919e0c515c66dbba3982f785', '1', '#admin[]#accesskeys[]#advancedMode[]#article2category[]#article2startpage[]#be_search[mediapool]#be_search[structure]#copyArticle[]#copyContent[]#moveArticle[]#moveCategory[]#moveSlice[]#publishArticle[]#publishCategory[]#textile[help]#', 0, 'setup', 'root', 1429645443, 1431717760, 1431888211, '3agvnrvtemlgeos8fi8d2o1jga68guln', NULL, 0);
+(1, 'Administrator', '', 'root', 'dc76e9f0c0006e8f919e0c515c66dbba3982f785', '1', '#admin[]#accesskeys[]#advancedMode[]#article2category[]#article2startpage[]#be_search[mediapool]#be_search[structure]#copyArticle[]#copyContent[]#moveArticle[]#moveCategory[]#moveSlice[]#publishArticle[]#publishCategory[]#textile[help]#', 0, 'setup', 'root', 1429645443, 1431717760, 1431952887, 'vpnq0qfdqcggqma8p27rpbna9n19idg4', NULL, 0);
 
 --
 -- Indizes der exportierten Tabellen
 --
-
---
--- Indizes für die Tabelle `rex_62_params`
---
-ALTER TABLE `rex_62_params`
- ADD PRIMARY KEY (`field_id`), ADD UNIQUE KEY `name` (`name`);
-
---
--- Indizes für die Tabelle `rex_62_type`
---
-ALTER TABLE `rex_62_type`
- ADD PRIMARY KEY (`id`);
 
 --
 -- Indizes für die Tabelle `rex_375_archive`
@@ -778,16 +768,28 @@ ALTER TABLE `rex_375_user2group`
  ADD UNIQUE KEY `uid` (`uid`,`gid`);
 
 --
--- Indizes für die Tabelle `rex_679_types`
+-- Indizes für die Tabelle `rex_62_params`
 --
-ALTER TABLE `rex_679_types`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `name` (`name`);
+ALTER TABLE `rex_62_params`
+ ADD PRIMARY KEY (`field_id`), ADD UNIQUE KEY `name` (`name`);
+
+--
+-- Indizes für die Tabelle `rex_62_type`
+--
+ALTER TABLE `rex_62_type`
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indizes für die Tabelle `rex_679_type_effects`
 --
 ALTER TABLE `rex_679_type_effects`
  ADD PRIMARY KEY (`id`);
+
+--
+-- Indizes für die Tabelle `rex_679_types`
+--
+ALTER TABLE `rex_679_types`
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `name` (`name`);
 
 --
 -- Indizes für die Tabelle `rex_action`
@@ -884,16 +886,6 @@ ALTER TABLE `rex_user`
 --
 
 --
--- AUTO_INCREMENT für Tabelle `rex_62_params`
---
-ALTER TABLE `rex_62_params`
-MODIFY `field_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
---
--- AUTO_INCREMENT für Tabelle `rex_62_type`
---
-ALTER TABLE `rex_62_type`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
---
 -- AUTO_INCREMENT für Tabelle `rex_375_archive`
 --
 ALTER TABLE `rex_375_archive`
@@ -909,14 +901,24 @@ MODIFY `id` smallint(4) unsigned NOT NULL AUTO_INCREMENT;
 ALTER TABLE `rex_375_user`
 MODIFY `id` smallint(4) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT für Tabelle `rex_679_types`
+-- AUTO_INCREMENT für Tabelle `rex_62_params`
 --
-ALTER TABLE `rex_679_types`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+ALTER TABLE `rex_62_params`
+MODIFY `field_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT für Tabelle `rex_62_type`
+--
+ALTER TABLE `rex_62_type`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT für Tabelle `rex_679_type_effects`
 --
 ALTER TABLE `rex_679_type_effects`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT für Tabelle `rex_679_types`
+--
+ALTER TABLE `rex_679_types`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT für Tabelle `rex_action`
@@ -932,7 +934,7 @@ MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 -- AUTO_INCREMENT für Tabelle `rex_article_slice`
 --
 ALTER TABLE `rex_article_slice`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=40;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT für Tabelle `rex_file`
 --
@@ -982,7 +984,7 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT für Tabelle `rex_template`
 --
 ALTER TABLE `rex_template`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT für Tabelle `rex_user`
 --
