@@ -87,6 +87,7 @@ ul.gallery {
 	> li {
 		display: inline-block;
 		margin-bottom: 15px;
+		height: 220px;
 
 		@media (min-width: @screen-xs-min) {
 			width: 100%;
@@ -97,8 +98,15 @@ ul.gallery {
 			margin-right: 2%;
 		}
 
-		img {
+		> a {
+			display: block;
 			width: 100%;
+			height: 100%;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			-moz-background-size: cover;
+			-webkit-background-size: cover;
 		}
 	}
 
@@ -223,5 +231,40 @@ ul.gallery {
 
 	@media (max-width: @screen-sm-max) {
 		display: none;
+	}
+}
+
+#newsletter_archive {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+
+	> li {
+		font-size: 20px;
+		margin-bottom: 5px;
+
+		.date {
+			display: inline-block;
+			width: 150px;
+		}
+	}
+
+	@media (max-width: @screen-xs-max) {
+		display: block;
+
+		> li {
+			display: block;
+			padding-bottom: 15px;
+			margin-bottom: 15px;
+			border-bottom: 1px solid #BBB;
+
+			> * {
+				display: block;
+				text-align: center;
+				padding: 0;
+				margin: 0;
+				width: 100%;
+			}
+		}
 	}
 }

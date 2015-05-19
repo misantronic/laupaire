@@ -7,7 +7,7 @@
 					<input id="txt-email" type="email" class="form-control" autocomplete="off" placeholder="E-Mail address..." required="required" />
 				</label>
 				<input class="btn-subscribe btn btn-default" type="submit" value="Subscribe"/>
-				<span class="icon-loader"></span>
+				<a href="newsletter_archive-10.html" title="Newsletter Archive" class="btn-archive btn btn-default">Show archive</a>
 			</div>
 		</form>
 	</div>
