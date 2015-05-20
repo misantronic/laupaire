@@ -249,7 +249,7 @@ nav#navbar ul.nav li.cat-newsletter {
 }
 nav#navbar ul.nav li a {
   font-family: FuturaMedium, Arial, Helvetica, sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   text-transform: uppercase;
   display: inline-block;
   letter-spacing: 3px;
@@ -402,8 +402,8 @@ nav#navbar ul.nav li.active a {
   height: 11px;
   display: inline-block;
   position: absolute;
-  right: 2px;
-  top: 9px;
+  right: 11px;
+  top: 11px;
   background: url(../img/ajax-loader.gif) no-repeat 0 0;
 }
 #newsletter #txt-email {
@@ -461,8 +461,9 @@ nav#navbar ul.nav li.active a {
 @media (max-width: 991px) {
   #newsletter {
     margin: 0;
+    padding: 10px 0;
     text-align: center;
-    bottom: -135px;
+    position: static;
   }
   #newsletter h2 {
     float: none;
