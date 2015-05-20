@@ -15,6 +15,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-size: 13px;
 }
 @media (max-width: 767px) {
   body {
@@ -29,15 +30,10 @@ body {
     background-size: cover;
   }
 }
-body h1 {
-  font-size: 30px;
-  text-transform: uppercase;
-}
-body h2 {
-  font-size: 24px;
-}
 body h1,
 body h2 {
+  font-size: 14px;
+  text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 30px;
 }
@@ -50,6 +46,17 @@ body a:hover,
 body a:active:hover,
 body a:focus:hover {
   text-decoration: none;
+}
+body address,
+body blockquote .small,
+body blockquote footer,
+body blockquote small,
+body dd,
+body dt,
+body pre,
+body p,
+body #content {
+  line-height: 1.5;
 }
 body .clearfix {
   clear: both;
@@ -195,7 +202,7 @@ header {
   padding: 25px 0 0;
   position: fixed;
   width: 100%;
-  left: 15px;
+  left: 0;
   top: 0;
   box-sizing: border-box;
   z-index: 10;
@@ -236,7 +243,8 @@ nav#navbar ul.nav li {
   display: inline;
   float: none;
 }
-nav#navbar ul.nav li.cat-home {
+nav#navbar ul.nav li.cat-home,
+nav#navbar ul.nav li.cat-newsletter {
   display: none;
 }
 nav#navbar ul.nav li a {
@@ -246,12 +254,20 @@ nav#navbar ul.nav li a {
   display: inline-block;
   letter-spacing: 3px;
   color: #fff5e1;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 nav#navbar ul.nav li a:hover,
 nav#navbar ul.nav li a:focus,
 nav#navbar ul.nav li a:active {
   background: none;
   text-decoration: underline;
+}
+@media (max-width: 767px) {
+  nav#navbar ul.nav li a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 nav#navbar ul.nav li a:hover,
 nav#navbar ul.nav li.active a {
@@ -304,11 +320,13 @@ nav#navbar ul.nav li.active a {
   height: inherit;
 }
 #content {
-  padding: 40px;
+  padding: 40px 40px 100px;
   margin-top: 80vh;
+  margin-left: -15px;
+  margin-right: -15px;
   min-height: 20vh;
   box-sizing: border-box;
-  background: rgba(252, 247, 236, 0.9);
+  background: #fcf7ec;
   color: #444;
   font-family: Raleway, Arial, Helvetica, sans-serif;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
@@ -341,17 +359,20 @@ nav#navbar ul.nav li.active a {
 #newsletter {
   background: #2d2d2d;
   margin: 15px 0 0;
-  padding: 15px;
+  padding: 1px;
   font-family: Raleway, Arial, Helvetica, sans-serif;
   position: fixed;
   width: 100%;
   left: 0;
   bottom: -75px;
-  z-index: 9999;
+  z-index: 8000;
   transition: bottom 0.3s ease-out;
   -o-transition: bottom 0.3s ease-out;
   -moz-transition: bottom 0.3s ease-out;
   -webkit-transition: bottom 0.3s ease-out;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 #newsletter.focus {
   bottom: 0;
@@ -360,11 +381,11 @@ nav#navbar ul.nav li.active a {
   display: none;
 }
 #newsletter h2 {
-  font-size: 30px;
+  font-size: 16px;
   color: #fff5e1;
   float: left;
   text-transform: uppercase;
-  margin: 5px 50px 0 0;
+  margin: 14px 20px 0 0;
 }
 #newsletter .form-group {
   margin-bottom: 0;
@@ -386,10 +407,8 @@ nav#navbar ul.nav li.active a {
   background: url(../img/ajax-loader.gif) no-repeat 0 0;
 }
 #newsletter #txt-email {
-  border: none;
   border-radius: 0;
-  border-left: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  border: 1px solid #fff;
   background: none;
   box-shadow: none;
   color: #fff;
@@ -398,7 +417,7 @@ nav#navbar ul.nav li.active a {
 #newsletter .btn {
   border-radius: 0;
   background: none;
-  border-width: 2px;
+  border-width: 1px;
   border-color: #fff;
   color: #fff;
   margin-top: -2px;
@@ -435,7 +454,7 @@ nav#navbar ul.nav li.active a {
 }
 @media (min-width: 992px) {
   #newsletter .newsletter-wrapper {
-    width: 780px;
+    width: 640px;
     margin: 0 auto;
   }
 }
@@ -447,7 +466,7 @@ nav#navbar ul.nav li.active a {
   }
   #newsletter h2 {
     float: none;
-    margin: 0 0 25px;
+    margin: 0 0 10px;
   }
   #newsletter label {
     width: calc(100% - 115px);
@@ -457,18 +476,17 @@ nav#navbar ul.nav li.active a {
   overflow: hidden !important;
 }
 .fancybox-close {
-  background: none;
   right: 20px;
   top: 0;
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   background: #111;
-  padding: 20px;
+  padding: 10px;
   position: fixed;
   border-radius: 0 0 10px 10px;
 }
 .fancybox-close i {
-  font-size: 28px;
+  font-size: 20px;
   color: #fff5e1;
   transition: color 0.3s linear;
   -o-transition: color 0.3s linear;
@@ -490,7 +508,7 @@ nav#navbar ul.nav li.active a {
   margin-left: -9px;
 }
 .fancybox-overlay {
-  background: rgba(255, 255, 255, 0.9);
+  background: #ffffff;
 }
 .ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail,
 .ps-container:hover > .ps-scrollbar-y-rail:hover {

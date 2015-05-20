@@ -1,4 +1,4 @@
-<div id="newsletter">
+<div id="newsletter" class="focus">
 	<div class="newsletter-wrapper">
 		<h2>Newsletter</h2>
 		<form id="form-subscribe" action="subscribe.php" method="post">

@@ -23,6 +23,7 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	font-size: 13px;
 
     @media (max-width: @screen-xs-max) {
         background: #93B8D2;
@@ -37,16 +38,9 @@ body {
 		}
     }
 
-    h1 {
-        font-size: 30px;
-		text-transform: uppercase;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
 	h1, h2 {
+		font-size: 14px;
+		text-transform: uppercase;
 		margin-top: 0;
 		margin-bottom: 30px;
 	}
@@ -57,6 +51,10 @@ body {
 		&:hover {
 			text-decoration: none;
 		}
+	}
+
+	address, blockquote .small, blockquote footer, blockquote small, dd, dt, pre, p, #content {
+		line-height: 1.5;
 	}
 
 	.clearfix {
@@ -222,7 +220,7 @@ header {
 	padding: 25px 0 0;
 	position: fixed;
 	width: 100%;
-	left: 15px;
+	left: 0;
 	top: 0;
 	box-sizing: border-box;
 	z-index: 10;
@@ -268,7 +266,8 @@ nav#navbar {
 			display:inline;
 			float: none;
 
-			&.cat-home {
+			&.cat-home,
+			&.cat-newsletter {
 				display: none;
 			}
 
@@ -279,10 +278,17 @@ nav#navbar {
 				display:inline-block;
 				letter-spacing: 3px;
 				color: @color-logo;
+				padding-left: 20px;
+				padding-right: 20px;
 
 				&:hover, &:focus, &:active {
 					background: none;
 					text-decoration: underline;
+				}
+
+				@media (max-width: @screen-xs-max) {
+					padding-left: 10px;
+					padding-right: 10px;
 				}
 			}
 
@@ -348,11 +354,13 @@ nav#navbar {
 // MAIN CONTENT
 
 #content {
-	padding: 40px;
+	padding: 40px 40px 100px;
 	margin-top: 80vh;
+	margin-left: -15px;
+	margin-right: -15px;
 	min-height: 20vh;
 	box-sizing: border-box;
-	background: rgba(252, 247, 236, .9);
+	background: rgba(252, 247, 236, 1);
 	color: #444;
 
 	font-family: Raleway, Arial, Helvetica, sans-serif;
@@ -389,18 +397,22 @@ nav#navbar {
 #newsletter {
 	background: rgba(45, 45, 45, 1);
 	margin: 15px 0 0;
-	padding: 15px;
+	padding: 1px;
 	font-family: Raleway, Arial, Helvetica, sans-serif;
 	position: fixed;
 	width: 100%;
 	left: 0;
 	bottom: -75px;
-	z-index: 9999;
+	z-index: 8000;
 
 	transition: bottom 0.3s ease-out;
 	-o-transition: bottom 0.3s ease-out;
 	-moz-transition: bottom 0.3s ease-out;
 	-webkit-transition: bottom 0.3s ease-out;
+
+	box-shadow: 0 0 4px rgba(0,0,0,.4);
+	-moz-box-shadow: 0 0 4px rgba(0,0,0,.4);
+	-webkit-box-shadow: 0 0 4px rgba(0,0,0,.4);
 
 	&.focus {
 		bottom: 0;
@@ -411,11 +423,11 @@ nav#navbar {
 	}
 
 	h2 {
-		font-size: 30px;
+		font-size: 16px;
 		color: @color-logo;
 		float: left;
 		text-transform: uppercase;
-		margin: 5px 50px 0 0;
+		margin: 14px 20px 0 0;
 	}
 
 	.form-group {
@@ -443,10 +455,8 @@ nav#navbar {
 	}
 
 	#txt-email {
-		border: none;
 		border-radius: 0;
-		border-left: 2px solid #fff;
-		border-bottom: 2px solid #fff;
+		border: 1px solid #fff;
 		background: none;
 		box-shadow: none;
 		color: #fff;
@@ -456,7 +466,7 @@ nav#navbar {
 	.btn {
 		border-radius: 0;
 		background: none;
-		border-width: 2px;
+		border-width: 1px;
 		border-color: #fff;
 		color: #fff;
 		margin-top: -2px;
@@ -492,7 +502,7 @@ nav#navbar {
 
 	@media (min-width: @screen-md-min) {
 		.newsletter-wrapper {
-			width: 780px;
+			width: 640px;
 			margin: 0 auto;
 		}
 	}
@@ -504,7 +514,7 @@ nav#navbar {
 
 		h2 {
 			float: none;
-			margin: 0 0 25px;
+			margin: 0 0 10px;
 		}
 
 		label {
@@ -519,18 +529,17 @@ nav#navbar {
 }
 
 .fancybox-close {
-	background: none;
 	right: 20px;
 	top: 0;
-	width: 70px;
-	height: 70px;
+	width: 40px;
+	height: 40px;
 	background: #111;
-	padding: 20px;
+	padding: 10px;
 	position: fixed;
 	border-radius: 0 0 10px 10px;
 
 	i {
-		font-size: 28px;
+		font-size: 20px;
 		color: @color-logo;
 
 		transition: color 0.3s linear;
@@ -561,7 +570,7 @@ nav#navbar {
 }
 
 .fancybox-overlay {
-	background: rgba(255, 255, 255, 0.9);
+	background: rgba(255, 255, 255, 1);
 }
 
 .ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail,

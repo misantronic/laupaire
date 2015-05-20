@@ -4,6 +4,13 @@
     text-align: center;
   }
 }
+body.page-home #content {
+  background: none;
+  box-shadow: none;
+}
+body.page-home #newsletter {
+  display: none;
+}
 body.page-info #content h2 {
   margin-bottom: 5px;
 }
@@ -13,12 +20,17 @@ body.page-info #content address {
 }
 body.page-info #content .box {
   float: left;
-  width: 33%;
+  width: 25%;
   margin-bottom: 50px;
+  text-align: center;
 }
 @media (max-width: 767px) {
   body.page-info #content .box {
     float: none;
     width: 100%;
   }
+}
+body.page-info #impressum {
+  margin-top: 480px;
+  font-size: 12px;
 }

@@ -18,6 +18,17 @@ body.page-photos {
 	
 }
 
+body.page-home {
+	#content {
+		background: none;
+		box-shadow: none;
+	}
+
+	#newsletter {
+		display: none;
+	}
+}
+
 body.page-info {
     #content {
         h2 {
@@ -30,8 +41,9 @@ body.page-info {
 
 		.box {
 			float: left;
-			width: 33%;
+			width: 25%;
 			margin-bottom: 50px;
+			text-align: center;
 
 			@media (max-width: @screen-xs-max) {
 				float: none;
@@ -39,4 +51,9 @@ body.page-info {
 			}
 		}
     }
+
+	#impressum {
+		margin-top: 480px;
+		font-size: 12px;
+	}
 }

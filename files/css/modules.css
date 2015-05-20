@@ -24,10 +24,13 @@ ul#tourdates > li {
 ul#tourdates > li > * {
   display: table-cell;
   padding: 10px 0;
-  font-size: 20px;
+  font-size: 14px;
 }
 ul#tourdates > li > a {
   text-align: right;
+}
+ul#tourdates > li:first-child {
+  text-transform: uppercase;
 }
 @media (max-width: 767px) {
   ul#tourdates {
@@ -61,19 +64,18 @@ ul.gallery {
   padding: 0;
 }
 ul.gallery > li {
-  display: inline-block;
+  float: left;
   margin-bottom: 15px;
   height: 220px;
+  width: 100%;
 }
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   ul.gallery > li {
-    width: 100%;
-  }
-}
-@media (min-width: 992px) {
-  ul.gallery > li {
-    width: 31%;
+    width: 32%;
     margin-right: 2%;
+  }
+  ul.gallery > li:nth-child(3n+3) {
+    margin-right: 0;
   }
 }
 ul.gallery > li > a {
@@ -110,8 +112,11 @@ ul.gallery:last-child:after {
 }
 @media (min-width: 992px) {
   .video {
-    width: 31%;
+    width: 32%;
     margin-right: 2%;
+  }
+  .video:nth-child(3n+3) {
+    margin-right: 0;
   }
 }
 .album-wrapper > iframe {
@@ -136,6 +141,26 @@ ul.gallery:last-child:after {
   display: block;
   margin: 0 0 20px 0;
   max-width: 480px;
+}
+.spotify-track:nth-of-type(2),
+.spotify-track:nth-of-type(4),
+.spotify-track:nth-of-type(6) {
+  display: inline-block;
+  max-width: 49%;
+}
+.spotify-track:nth-of-type(3),
+.spotify-track:nth-of-type(5),
+.spotify-track:nth-of-type(7) {
+  display: inline-block;
+  max-width: 49%;
+  margin-left: 2%;
+}
+@media (max-width: 767px) {
+  .spotify-track {
+    display: block !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+  }
 }
 #curtain {
   position: fixed;
@@ -184,16 +209,29 @@ ul.gallery:last-child:after {
     display: none;
   }
 }
-#curtain-video {
+#curtain-video-container {
   position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5000;
+  padding: 0;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+#curtain-video-container > iframe {
   left: 50%;
   top: 50%;
+  position: absolute;
   margin-left: -430px;
   margin-top: -230px;
-  z-index: 5;
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 991px) {
-  #curtain-video {
+  #curtain-video-container {
     display: none;
   }
 }
@@ -203,7 +241,7 @@ ul.gallery:last-child:after {
   margin: 0;
 }
 #newsletter_archive > li {
-  font-size: 20px;
+  font-size: 14px;
   margin-bottom: 5px;
 }
 #newsletter_archive > li .date {
@@ -225,6 +263,6 @@ ul.gallery:last-child:after {
     text-align: center;
     padding: 0;
     margin: 0;
-    width: 100% !important;
+    width: 100%;
   }
 }

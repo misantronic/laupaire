@@ -9,6 +9,8 @@ $article = $this->getArticle();
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="google-site-verification" content="pLNLzINOA32Ukka7MFRJFGyH6q8Y_prh9FCjvpGspF4" />
 	<meta charset="UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" type="text/css" href="<?= $REX['HTDOCS_PATH'] ?>files/bin/style.min.css" />
 </head>
 <body class="page-<?= $name ?>">
 	<div id="wrapper" class="container">
@@ -47,9 +49,6 @@ $article = $this->getArticle();
 	<?php } ?>
 
 	<div id="fb-root"></div>
-
-	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' />
-	<link rel="stylesheet" type="text/css" href="<?= $REX['HTDOCS_PATH'] ?>files/bin/style.min.css" />
 
 	<script type="text/javascript" src="<?= $REX['HTDOCS_PATH'] ?>files/bin/externals.min.js"></script>
 	<script type="text/javascript" src="<?= $REX['HTDOCS_PATH'] ?>files/bin/internals.min.js"></script>

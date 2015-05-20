@@ -8,6 +8,29 @@ $(document).ready(function() {
 	initNewsletter();
 	initCurtain();
 
+	$("a.link-gallery").fancybox({
+		openEffect	: 'elastic',
+		closeEffect	: 'elastic',
+		prevEffect	: 'none',
+		nextEffect	: 'none',
+		maxWidth	: 1280,
+		maxHeight	: 720,
+		width		: '95%',
+		height		: '95%',
+		scrolling	: 'no',
+		padding		: 0,
+
+		tpl			: {
+			closeBtn: '<a href="javascript:;" class="fancybox-close"><i class="glyphicon glyphicon-remove"></i></a>'
+		},
+
+		helpers : {
+			title : {
+				type : 'inside'
+			}
+		}
+	});
+
 	// decode email-addresses
 	$('a.email').each(function() {
 		var link = $(this);
@@ -63,11 +86,14 @@ function initNewsletter() {
 function initCurtain() {
 	var curtain = $('#curtain:visible');
 	if(curtain.length) {
-		var curtainVideo = $('#curtain-video');
-		curtainVideo.appendTo('#content');
+		$('#curtain-video-container')
+			.appendTo('#content')
+			.on('click', 'a.fancybox-close', function(e) {
+				$(e.delegateTarget).fadeOut('fast');
+			});
 
 		window.onYouTubePlayerAPIReady = function() {
-			var videoId = curtainVideo.text();
+			var videoId = $('#curtain-video').text();
 			player = new YT.Player('curtain-video', {
 				playerVars: { 'autoplay': 1, 'controls': 1 },
 				videoId: videoId,
@@ -80,6 +106,27 @@ function initCurtain() {
 		window.onPlayerReady = function(e) {
 			e.target.mute();
 		};
+
+		var videoId = $('#hid-video-id').val();
+		if(videoId) {
+			var html = '<div id="curtain-video">'+ videoId  +'</div>';
+			$.fancybox(html, {
+				openEffect	: 'none',
+				closeEffect	: 'none',
+				prevEffect	: 'none',
+				nextEffect	: 'none',
+				maxWidth	: 1280,
+				maxHeight	: 720,
+				width		: '95%',
+				height		: '95%',
+				scrolling	: 'no',
+				padding		: 0,
+
+				tpl			: {
+					closeBtn: '<a href="javascript:;" class="fancybox-close"><i class="glyphicon glyphicon-remove"></i></a>'
+				}
+			});
+		}
 	} else {
 		initSocialMedia();
 	}
